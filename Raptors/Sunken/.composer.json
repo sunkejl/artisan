@@ -1,0 +1,23 @@
+{
+  "name": "sunken/help",
+  "description": "Sunken Help Package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "sunken",
+      "email": "sunkejl@live.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sunken\\Help\\": "src/"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "symfony/browser-kit": "^3.1"
+    }
+}

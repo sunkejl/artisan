@@ -1,0 +1,12 @@
+parameters:
+    # ...
+    mailer.transport: sendmail
+
+services:
+    mailer:
+        class:     Mailer
+        arguments: ['%mailer.transport%']
+    newsletter_manager:
+        class:     NewsletterManager
+        calls:
+            - [setMailer, ['@mailer']]

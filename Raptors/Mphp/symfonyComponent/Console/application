@@ -1,0 +1,12 @@
+#! /usr/bin/env php
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2016/10/28
+ * Time: 17:44
+ */
+include "vendor/autoload.php";
+$application=new \Symfony\Component\Console\Application();
+$application->add(new \App\CreateUserCommand());
+$application->run();

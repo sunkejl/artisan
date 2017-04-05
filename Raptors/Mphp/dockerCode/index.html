@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+<div class="container main" style="height: 500px">
+</div>
+
+<div class="container">
+    <form role="form">
+        <div class="form-group">
+            <label for="text">texts</label>
+            <input type="text" class="form-control" id="text" placeholder="text">
+        </div>
+        <button type="button" class="btn btn-default">Submit</button>
+    </form>
+</div>
+<script>
+    $(function () {
+        var wsServer = 'ws://172.16.54.18:49155';
+        var websocket = new WebSocket(wsServer);
+        websocket.onopen = function (evt) {
+            //websocket.send("message6379")
+            console.log("Connected to WebSocket server.");
+        };
+
+        websocket.onclose = function (evt) {
+            console.log("Disconnected");
+        };
+
+        websocket.onmessage = function (evt) {
+            console.log('Retrieved data from server: ' + evt.data);
+            var dateObj = new Date();
+            var date = dateObj.toDateString();
+            var time = dateObj.toLocaleTimeString();
+            $('.main').append("<div style='overflow: hidden'><div style='float: left;position: relative;height: 50px;display: inline'><span>" + date + time +"<br>" + evt.data + "</span><br></div></div>");
+            //document.writeln(evt.data);
+        };
+
+        websocket.onerror = function (evt, e) {
+            console.log('Error occured: ' + evt.data);
+        };
+
+
+        $("button[type='button']").click(function () {
+            var text = $("input[type='text']").val();
+            var dateObj = new Date();
+            var date = dateObj.toDateString();
+            var time = dateObj.toLocaleTimeString();
+            console.log(time);
+            console.log(text);
+            $('.main').append("<div style='overflow: hidden'><div style='float: right;position: relative;height: 50px;display: inline'><span style=>" + date + time +"<br>" + text + "</span><br></div></div>");
+            websocket.send(text)
+            return false;
+        });
+    });
+
+</script>
+</body>
+</html>

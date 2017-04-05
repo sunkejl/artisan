@@ -1,0 +1,10 @@
+{
+    "require": {
+        "symfony/event-dispatcher": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "Acme/"
+        }
+    }
+}

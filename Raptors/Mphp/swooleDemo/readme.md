@@ -1,0 +1,1 @@
+netstat |grep 9505 查看端口号

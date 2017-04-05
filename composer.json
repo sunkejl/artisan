@@ -1,0 +1,6 @@
+{
+  "require": {
+    "silex/silex":"~2.0",
+    "slim/slim":"^3.0"
+  }
+}

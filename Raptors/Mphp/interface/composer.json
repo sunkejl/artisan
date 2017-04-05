@@ -1,0 +1,8 @@
+{
+  "require": {},
+  "autoload": {
+    "classmap": [
+      "src"
+    ]
+  }
+}

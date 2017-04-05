@@ -1,0 +1,6 @@
+<?php
+for($i = 0; $i <= 25; $i += 1){ 
+    echo $i;
+    flush();
+    sleep(1);
+}

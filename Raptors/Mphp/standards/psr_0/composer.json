@@ -1,0 +1,8 @@
+{
+  "autoload": {
+    "psr-0": {
+      "Simplex": "src/",
+      "Calendar": "src/"
+    }
+  }
+}

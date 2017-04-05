@@ -1,0 +1,1 @@
+先执行ClassMapGenerator.php 自动生成class_map.php里的内容

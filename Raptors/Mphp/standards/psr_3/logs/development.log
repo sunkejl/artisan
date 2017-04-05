@@ -1,0 +1,8 @@
+[2016-10-17 17:40:33] myApp.DEBUG: this is a debug [] []
+[2016-10-17 17:40:33] myApp.WARNING: this is a warning [] []
+[2016-10-19 15:15:06] myApp.DEBUG: this is a debug [] []
+[2016-10-19 15:15:06] myApp.WARNING: this is a warning [] []
+[2016-10-19 15:18:05] myApp.DEBUG: this is a debug {"key":"value"} []
+[2016-10-19 15:18:05] myApp.WARNING: this is a warning {"key":"value"} []
+[2016-10-19 15:20:00] myApp.DEBUG: this is a debug {"key":"value","key1":"value1"} []
+[2016-10-19 15:20:00] myApp.WARNING: this is a warning {"key":"value","key1":"value1"} []
