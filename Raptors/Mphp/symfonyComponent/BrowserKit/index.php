@@ -6,7 +6,7 @@
  * Date: 2016/10/26
  * Time: 11:31
  */
-include "vendor/autoload.php";
+include dirname(dirname(dirname(dirname(dirname(__FILE__))))).DIRECTORY_SEPARATOR."vendor/autoload.php";
 include "Client.php";
 use Acme\Client;
 

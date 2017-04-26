@@ -8,7 +8,7 @@
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-include "vendor/autoload.php";
+include dirname(dirname(dirname(dirname(dirname(__FILE__))))).DIRECTORY_SEPARATOR."vendor/autoload.php";
 $container=new ContainerBuilder();
 $container->register('mailer',"Mailer")->addArgument('sendmail');
 var_dump($container->get("mailer"));

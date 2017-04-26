@@ -8,7 +8,7 @@
  * Time: 17:58
  */
 namespace DomCrawler\index;
-require "vendor/autoload.php";
+include dirname(dirname(dirname(dirname(dirname(__FILE__))))).DIRECTORY_SEPARATOR."vendor/autoload.php";
 
 use Goutte\Client;
 use Symfony\Component\DomCrawler\Crawler;

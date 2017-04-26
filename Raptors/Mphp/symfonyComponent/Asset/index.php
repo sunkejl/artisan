@@ -5,7 +5,7 @@
  * Date: 2016/10/26
  * Time: 10:43
  */
-include "vendor/autoload.php";
+include dirname(dirname(dirname(dirname(dirname(__FILE__))))).DIRECTORY_SEPARATOR."vendor/autoload.php";
 include "DateVersionStrategy.php";
 use Symfony\Component\Asset\Package;
 use Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy;

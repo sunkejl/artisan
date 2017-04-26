@@ -8,7 +8,7 @@
  * Date: 2016/11/2
  * Time: 18:39
  */
-include "vendor/autoload.php";
+include dirname(dirname(dirname(dirname(dirname(__FILE__))))).DIRECTORY_SEPARATOR."vendor/autoload.php";
 use Symfony\Component\HttpFoundation\Request;
 
 $request = Request::createFromGlobals();
@@ -16,6 +16,7 @@ $request = Request::create("/index.php?bar=123", "post", ["a" => "a", "b" => "b"
 $bar = $request->query->get('bar', 'baz');
 $query = $request->query->get("a");
 $pathInfo = $request->getPathInfo();
+$ip=$request->getClientIp();
 $httpHost = $request->server->get('HTTP_HOST');
 $cookie = $request->cookies->get("cook");
 $method = $request->getMethod();

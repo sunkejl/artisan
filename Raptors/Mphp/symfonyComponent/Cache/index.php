@@ -5,7 +5,7 @@
  * Date: 2016/10/26
  * Time: 14:03
  */
-include "vendor/autoload.php";
+include dirname(dirname(dirname(dirname(dirname(__FILE__))))).DIRECTORY_SEPARATOR."vendor/autoload.php";
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
 $cache = new FilesystemAdapter();
