@@ -7,6 +7,6 @@
  */
 use Carbon\Carbon;
 
-require 'vendor/autoload.php';
+require dirname(dirname(dirname(dirname(__FILE__)))) . DIRECTORY_SEPARATOR . "vendor/autoload.php";
 
 printf("Now: %s", Carbon::now());

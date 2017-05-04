@@ -11,11 +11,13 @@
 
 namespace Silex\Tests\Provider;
 
+use Fig\Link\Link;
 use Silex\Application;
 use Silex\Provider\CsrfServiceProvider;
 use Silex\Provider\FormServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\AssetServiceProvider;
+use Symfony\Bridge\Twig\Extension\WebLinkExtension;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -115,5 +117,47 @@ class TwigServiceProviderTest extends \PHPUnit_Framework_TestCase
         $app->register(new TwigServiceProvider());
 
         $this->assertInstanceOf('Twig_Environment', $app['twig']);
+    }
+
+    public function testFormatParameters()
+    {
+        $app = new Application();
+
+        $timezone = new \DateTimeZone('Europe/Paris');
+
+        $app->register(new TwigServiceProvider(), array(
+            'twig.date.format' => 'Y-m-d',
+            'twig.date.interval_format' => '%h hours',
+            'twig.date.timezone' => $timezone,
+            'twig.number_format.decimals' => 2,
+            'twig.number_format.decimal_point' => ',',
+            'twig.number_format.thousands_separator' => ' ',
+        ));
+
+        $twig = $app['twig'];
+
+        $this->assertSame(array('Y-m-d', '%h hours'), $twig->getExtension('Twig_Extension_Core')->getDateFormat());
+        $this->assertSame($timezone, $twig->getExtension('Twig_Extension_Core')->getTimezone());
+        $this->assertSame(array(2, ',', ' '), $twig->getExtension('Twig_Extension_Core')->getNumberFormat());
+    }
+
+    public function testWebLinkIntegration()
+    {
+        if (!class_exists(WebLinkExtension::class)) {
+            $this->markTestSkipped('Twig WebLink extension not available.');
+        }
+
+        $app = new Application();
+        $app['request_stack']->push($request = Request::create('/'));
+        $app->register(new TwigServiceProvider(), array(
+            'twig.templates' => array(
+                'preload' => '{{ preload("/foo.css") }}',
+            ),
+        ));
+
+        $this->assertEquals('/foo.css', $app['twig']->render('preload'));
+
+        $link = new Link('preload', '/foo.css');
+        $this->assertEquals(array($link), array_values($request->attributes->get('_links')->getLinks()));
     }
 }

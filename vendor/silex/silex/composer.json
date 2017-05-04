@@ -37,17 +37,18 @@
         "symfony/monolog-bridge": "~2.8|^3.0",
         "symfony/doctrine-bridge": "~2.8|^3.0",
         "symfony/options-resolver": "~2.8|^3.0",
-        "symfony/phpunit-bridge": "~2.8|^3.0",
+        "symfony/phpunit-bridge": "^3.2",
         "symfony/process": "~2.8|^3.0",
         "symfony/serializer": "~2.8|^3.0",
         "symfony/translation": "~2.8|^3.0",
         "symfony/twig-bridge": "~2.8|^3.0",
         "symfony/validator": "~2.8|^3.0",
         "symfony/var-dumper": "~2.8|^3.0",
-        "twig/twig": "~1.27|~2.0",
+        "twig/twig": "~1.28|~2.0",
         "doctrine/dbal": "~2.2",
         "swiftmailer/swiftmailer": "~5",
-        "monolog/monolog": "^1.4.1"
+        "monolog/monolog": "^1.4.1",
+        "symfony/web-link": "^3.3"
     },
     "replace": {
         "silex/api": "self.version",
@@ -61,7 +62,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.0.x-dev"
+            "dev-master": "2.1.x-dev"
         }
     },
     "minimum-stability": "dev"

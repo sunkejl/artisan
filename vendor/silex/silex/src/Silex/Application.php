@@ -41,7 +41,7 @@ use Silex\Provider\HttpKernelServiceProvider;
  */
 class Application extends Container implements HttpKernelInterface, TerminableInterface
 {
-    const VERSION = '2.0.4';
+    const VERSION = '2.1.0';
 
     const EARLY_EVENT = 512;
     const LATE_EVENT = -512;
@@ -58,9 +58,6 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
      */
     public function __construct(array $values = array())
     {
-
-        $this['request.http_port'] = 80;
-        var_dump($this);exit;
         parent::__construct();
 
         $this['request.http_port'] = 80;

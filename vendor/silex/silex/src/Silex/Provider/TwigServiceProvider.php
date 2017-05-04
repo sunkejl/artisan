@@ -23,9 +23,11 @@ use Symfony\Bridge\Twig\Extension\FormExtension;
 use Symfony\Bridge\Twig\Extension\SecurityExtension;
 use Symfony\Bridge\Twig\Extension\HttpFoundationExtension;
 use Symfony\Bridge\Twig\Extension\HttpKernelExtension;
+use Symfony\Bridge\Twig\Extension\WebLinkExtension;
 use Symfony\Bridge\Twig\Form\TwigRendererEngine;
 use Symfony\Bridge\Twig\Form\TwigRenderer;
 use Symfony\Bridge\Twig\Extension\HttpKernelRuntime;
+use Symfony\Component\WebLink\HttpHeaderSerializer;
 
 /**
  * Twig integration for Silex.
@@ -41,6 +43,14 @@ class TwigServiceProvider implements ServiceProviderInterface
         $app['twig.path'] = array();
         $app['twig.templates'] = array();
 
+        $app['twig.date.format'] = 'F j, Y H:i';
+        $app['twig.date.interval_format'] = '%d days';
+        $app['twig.date.timezone'] = null;
+
+        $app['twig.number_format.decimals'] = 0;
+        $app['twig.number_format.decimal_point'] = '.';
+        $app['twig.number_format.thousands_separator'] = ',';
+
         $app['twig'] = function ($app) {
             $app['twig.options'] = array_replace(
                 array(
@@ -54,6 +64,16 @@ class TwigServiceProvider implements ServiceProviderInterface
             // registered for BC, but should not be used anymore
             // deprecated and should probably be removed in Silex 3.0
             $twig->addGlobal('app', $app);
+
+            $coreExtension = $twig->getExtension('Twig_Extension_Core');
+
+            $coreExtension->setDateFormat($app['twig.date.format'], $app['twig.date.interval_format']);
+
+            if (null !== $app['twig.date.timezone']) {
+                $coreExtension->setTimezone($app['twig.date.timezone']);
+            }
+
+            $coreExtension->setNumberFormat($app['twig.number_format.decimals'], $app['twig.number_format.decimal_point'], $app['twig.number_format.thousands_separator']);
 
             if ($app['debug']) {
                 $twig->addExtension(new \Twig_Extension_Debug());
@@ -109,7 +129,7 @@ class TwigServiceProvider implements ServiceProviderInterface
                         return new TwigRenderer($app['twig.form.engine'], $csrfTokenManager);
                     };
 
-                    $twig->addExtension(new FormExtension($app['twig.form.renderer']));
+                    $twig->addExtension(new FormExtension(class_exists(HttpKernelRuntime::class) ? null : $app['twig.form.renderer']));
 
                     // add loader for Symfony built-in form templates
                     $reflected = new \ReflectionClass('Symfony\Bridge\Twig\Extension\FormExtension');
@@ -123,6 +143,10 @@ class TwigServiceProvider implements ServiceProviderInterface
 
                 if (class_exists(HttpKernelRuntime::class)) {
                     $twig->addRuntimeLoader($app['twig.runtime_loader']);
+                }
+
+                if (class_exists(HttpHeaderSerializer::class) && class_exists(WebLinkExtension::class)) {
+                    $twig->addExtension(new WebLinkExtension($app['request_stack']));
                 }
             }
 
