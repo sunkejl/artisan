@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="uploadForm" method="POST" action="upload" enctype="multipart/form-data">
+    <input type="file" id="myFile" name="file" multiple>
+    <input type="button" onclick="up()"  value="提交">
+    <progress id="myProgress" value="0" max="100">
+    </progress>
+</form>
+</body>
+<script>
+    function up() {
+        var xhr = new XMLHttpRequest();
+        var formData = new FormData();
+        var fileInput = document.getElementById("myFile");
+        var file = fileInput.files[0];
+        formData.append('myFile', file);
+
+        xhr.open("POST", "/upload.php");
+
+//        for(var i = 0; i < files.length; i++) {
+//            var file = files[i];
+//            formData.append('files[]', file, file.name);
+//        }
+
+//        xhr.onload = function(){
+//            if(this.status === 200){
+//                //对请求成功的处理
+//            }
+//        }
+        xhr.upload.onprogress = function(event) {
+            if (event.lengthComputable) {
+                var percentComplete = (event.loaded / event.total) * 100;
+                var myProgress= document.getElementById("myProgress");
+                myProgress.value=percentComplete;
+                // 对进度进行处理
+            }
+        }
+
+        xhr.send(formData);
+        xhr = null;
+    }
+</script>
+</html>

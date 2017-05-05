@@ -67,6 +67,10 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
         array (
             'FastRoute\\' => 10,
         ),
+        'E' => 
+        array (
+            'Ek\\Controller\\' => 14,
+        ),
         'C' => 
         array (
             'Carbon\\' => 7,
@@ -209,6 +213,10 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'Ek\\Controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Eknus/Controller',
         ),
         'Carbon\\' => 
         array (

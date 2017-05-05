@@ -16,5 +16,10 @@
     "symfony/asset": "^3.1",
     "curl/curl": "^1.5",
     "nesbot/carbon": "~1.21"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ek\\Controller\\": "Eknus/Controller/"
+    }
   }
 }

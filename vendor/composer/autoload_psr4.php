@@ -40,5 +40,6 @@ return array(
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Goutte\\' => array($vendorDir . '/fabpot/goutte/Goutte'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
+    'Ek\\Controller\\' => array($baseDir . '/Eknus/Controller'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
 );
