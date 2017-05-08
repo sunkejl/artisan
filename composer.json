@@ -1,6 +1,8 @@
 {
   "require": {
     "silex/silex":"~2.0",
+    "laravel/lumen":"*",
+    "laravel/laravel":"^5.4",
     "slim/slim":"^3.0",
     "symfony/http-foundation": "^3.1",
     "symfony/form": "^3.1",

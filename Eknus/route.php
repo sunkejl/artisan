@@ -13,7 +13,7 @@ use Symfony\Component\Routing;
 $routes = new Routing\RouteCollection();
 $routes->add('app', new Routing\Route('/', array(
     'name' => 'appName',
-    '_controller' => new EkController\AurielController(),
+    '_controller' => new \Ek\Controller\Auriel(),
 )));
 $routes->add('hello', new Routing\Route('/hello/{name}', array('name' => 'World')));
 $routes->add('bye', new Routing\Route('/bye'));
