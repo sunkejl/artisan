@@ -13,7 +13,20 @@ use Symfony\Component\Routing;
 $routes = new Routing\RouteCollection();
 $routes->add('app', new Routing\Route('/', array(
     'name' => 'appName',
-    '_controller' => new \Ek\Controller\Auriel(),
+    '_controller' => '\Ek\Controller\Auriel::indexAction',
+    //'_controller' => new \Ek\Controller\Auriel(),
+)));
+$routes->add('productInsert', new Routing\Route('/product/insert', array(
+    'name' => 'productInsert',
+    '_controller' => '\Ek\Controller\ProductInfo::insert',
+)));
+$routes->add('productGetAll', new Routing\Route('/product/getAll', array(
+    'name' => 'productGetAll',
+    '_controller' => '\Ek\Controller\ProductInfo::getAll',
+)));
+$routes->add('productFindOne', new Routing\Route('/product/findOne', array(
+    'name' => 'productFindOne',
+    '_controller' => '\Ek\Controller\ProductInfo::findOne',
 )));
 $routes->add('hello', new Routing\Route('/hello/{name}', array('name' => 'World')));
 $routes->add('bye', new Routing\Route('/bye'));

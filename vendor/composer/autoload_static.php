@@ -103,11 +103,16 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
         ),
         'E' => 
         array (
+            'Ek\\Lib\\' => 7,
             'Ek\\Controller\\' => 14,
         ),
         'D' => 
         array (
             'Dotenv\\' => 7,
+            'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
+            'Doctrine\\Common\\' => 16,
         ),
         'C' => 
         array (
@@ -309,6 +314,10 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
+        'Ek\\Lib\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Eknus/Lib',
+        ),
         'Ek\\Controller\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Eknus/Controller',
@@ -316,6 +325,22 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'Doctrine\\Instantiator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
+        ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
+        ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
         ),
         'Cron\\' => 
         array (
@@ -357,9 +382,25 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
         ),
         'D' => 
         array (
+            'Doctrine\\ORM\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/orm/lib',
+            ),
+            'Doctrine\\DBAL\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/dbal/lib',
+            ),
+            'Doctrine\\Common\\Lexer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
+            ),
             'Doctrine\\Common\\Inflector\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+            ),
+            'Doctrine\\Common\\Collections\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
         ),
         'C' => 
@@ -369,6 +410,10 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
                 0 => __DIR__ . '/..' . '/curl/curl/src',
             ),
         ),
+    );
+
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/../..' . '/Eknus/Model',
     );
 
     public static $classMap = array (
@@ -393,6 +438,7 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
             $loader->prefixLengthsPsr4 = ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d::$classMap;
 
         }, null, ClassLoader::class);

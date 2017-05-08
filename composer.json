@@ -1,9 +1,9 @@
 {
   "require": {
-    "silex/silex":"~2.0",
-    "laravel/lumen":"*",
-    "laravel/laravel":"^5.4",
-    "slim/slim":"^3.0",
+    "silex/silex": "~2.0",
+    "laravel/lumen": "*",
+    "laravel/laravel": "^5.4",
+    "slim/slim": "^3.0",
     "symfony/http-foundation": "^3.1",
     "symfony/form": "^3.1",
     "symfony/finder": "^3.1",
@@ -17,11 +17,18 @@
     "symfony/browser-kit": "^3.1",
     "symfony/asset": "^3.1",
     "curl/curl": "^1.5",
-    "nesbot/carbon": "~1.21"
+    "nesbot/carbon": "~1.21",
+    "symfony/http-kernel": "~3.2",
+    "symfony/event-dispatcher": "~3.2",
+    "doctrine/orm": "v2.5.6"
   },
   "autoload": {
     "psr-4": {
-      "Ek\\Controller\\": "Eknus/Controller/"
+      "Ek\\Controller\\": "Eknus/Controller/",
+      "Ek\\Lib\\": "Eknus/Lib/"
+    },
+    "psr-0": {
+      "": "Eknus/Model/"
     }
   }
 }

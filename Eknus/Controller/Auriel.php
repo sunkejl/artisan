@@ -1,6 +1,11 @@
 <?php
+
 namespace Ek\Controller;
+
+use Ek\Model\Product;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+
 /**
  * Created by PhpStorm.
  * User: Administrator
@@ -9,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class Auriel
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $response = new Response();
         $response->setContent("aaa");

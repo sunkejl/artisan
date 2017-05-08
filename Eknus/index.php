@@ -10,12 +10,19 @@ ini_set('display_errors', true);
 error_reporting(E_ALL);
 
 require dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . "vendor/autoload.php";
-$a = new \Ek\Controller\Auriel();
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing;
 
 $request = Request::createFromGlobals();
+
+
+//依赖注入容器 #避免每次加载都new
+$container = new \Symfony\Component\DependencyInjection\ContainerBuilder();
+$container->register("db","Ek\Lib\Db");
+$entityManager = $container->get("db")->manager();
+$request->manager=$entityManager;
+
 $routes = include "route.php";
 
 $requestContext = new Routing\RequestContext();
@@ -30,6 +37,15 @@ $name = $pathInfo['name'];
 //$app=new IndexController();
 $request->attributes->add($pathInfo);
 
-$response = call_user_func(array($request->attributes->get('_controller'), 'indexAction'));
+
+//HttpKernel 获取controller和参数
+$resolver = new \Symfony\Component\HttpKernel\Controller\ControllerResolver();
+$controller = $resolver->getController($request);
+$arguments = $resolver->getArguments($request, $controller);#获取类中方法的参数
+$response = call_user_func($controller,$request);
+
+//旧的写法
+//$response = call_user_func(array($request->attributes->get('_controller'), 'indexAction'),$request);
+#可以考虑把 '_controller' => new \Ek\Controller\Auriel(), 改成'_controller' => array(new Controller(), 'indexAction'),缺点:class is always instantiated
 $response->send();
 
