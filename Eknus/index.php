@@ -17,11 +17,6 @@ use Symfony\Component\Routing;
 $request = Request::createFromGlobals();
 
 
-//依赖注入容器 #避免每次加载都new
-$container = new \Symfony\Component\DependencyInjection\ContainerBuilder();
-$container->register("db","Ek\Lib\Db");
-$entityManager = $container->get("db")->manager();
-$request->manager=$entityManager;
 
 $routes = include "route.php";
 

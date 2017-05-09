@@ -8,10 +8,9 @@ namespace Ek\Lib;
  */
 class Db
 {
-    public static function manager()
+    public static function getManager()
     {
         $config = new \Doctrine\DBAL\Configuration();
-//..
         $connectionParams = array(
             'dbname' => 'ts',
             'user' => 'root',

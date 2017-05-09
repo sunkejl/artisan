@@ -6,17 +6,18 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+
 /**
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2017/5/5
  * Time: 15:04
  */
-class ProductInfo
+class ProductInfo extends Controller
 {
     public function getAll(Request $request)
     {
-        $entityManager = $request->manager;
+        $entityManager = $this->getDoctrine()->getManager();
 
         $productRepository = $entityManager->getRepository("Product");
         $products = $productRepository->findAll();
