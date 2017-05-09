@@ -42,5 +42,7 @@ $response = call_user_func($controller,$request);
 //旧的写法
 //$response = call_user_func(array($request->attributes->get('_controller'), 'indexAction'),$request);
 #可以考虑把 '_controller' => new \Ek\Controller\Auriel(), 改成'_controller' => array(new Controller(), 'indexAction'),缺点:class is always instantiated
+
+
 $response->send();
 

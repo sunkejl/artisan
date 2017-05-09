@@ -26,8 +26,7 @@ class Db
 //}
 
         $isDevMode = true;
-        $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(array(__DIR__ . "/Model"),
-            $isDevMode, null, null, false);
+        $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(array(__DIR__ . "/Model"), $isDevMode, null, null, false);
         $entityManager = \Doctrine\ORM\EntityManager::create($conn, $config);
         return $entityManager;
     }

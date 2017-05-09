@@ -15,10 +15,10 @@ class Auriel extends Controller
 {
     public function indexAction(Request $request)
     {
-        return $this->render("index.html.twig",array("go"=>"to"));
-        exit;
-        $response = new Response();
-        $response->setContent("aaa");
-        return $response;
+        $this->getsSession()->getManager()->set("a",1133);
+        var_dump($this->getsSession()->getManager()->get("a"));
+        $this->log()->writeLog()->error(222);
+        $this->log()->writeLog()->warning(222);
+        return $this->render("index.html.twig",array("name"=>"sk"));
     }
 }

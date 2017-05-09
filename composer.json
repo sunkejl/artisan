@@ -3,7 +3,6 @@
     "silex/silex": "~2.0",
     "laravel/lumen": "*",
     "laravel/laravel": "^5.4",
-    "slim/slim": "^3.0",
     "symfony/http-foundation": "^3.1",
     "symfony/form": "^3.1",
     "symfony/finder": "^3.1",
@@ -21,7 +20,9 @@
     "symfony/http-kernel": "~3.2",
     "symfony/event-dispatcher": "~3.2",
     "doctrine/orm": "v2.5.6",
-    "twig/twig":"~1.0"
+    "twig/twig":"~1.0",
+    "monolog/monolog":"^1.0",
+    "symfony/serializer":"~3.2"
   },
   "autoload": {
     "psr-4": {

@@ -10,6 +10,7 @@ namespace Ek\Controller;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 class Controller
@@ -26,7 +27,19 @@ class Controller
         $container = new \Symfony\Component\DependencyInjection\ContainerBuilder();
         $container->register("doctrine", "Ek\Lib\Db");
         $container->register("twig", "Ek\Lib\Twig");
+        $container->register("log", "Ek\Lib\Log");
+        $container->register("session", "Ek\Lib\Session");
         $this->setContainer($container);
+    }
+
+    protected function getsSession()
+    {
+        return $this->container->get("session");
+    }
+
+    protected function log()
+    {
+        return $this->container->get("log");
     }
 
     /**
@@ -43,12 +56,13 @@ class Controller
         }
         return $this->container->get('doctrine');
     }
+
     /**
      * Renders a view.
      *
-     * @param string   $view       The view name
-     * @param array    $parameters An array of parameters to pass to the view
-     * @param Response $response   A response instance
+     * @param string $view The view name
+     * @param array $parameters An array of parameters to pass to the view
+     * @param Response $response A response instance
      *
      * @return Response A Response instance
      */
