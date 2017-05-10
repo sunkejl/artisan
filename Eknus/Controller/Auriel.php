@@ -2,8 +2,10 @@
 
 namespace Ek\Controller;
 
+use Ek\Lib\Db;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+
 
 /**
  * Created by PhpStorm.

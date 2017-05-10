@@ -28,6 +28,10 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
         array (
             'XdgBaseDir\\' => 11,
         ),
+        'W' => 
+        array (
+            'Whoops\\' => 7,
+        ),
         'T' => 
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
@@ -127,6 +131,10 @@ class ComposerStaticInit63d4632d8a5416d4da39de16bf0dc30d
         'XdgBaseDir\\' => 
         array (
             0 => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src',
+        ),
+        'Whoops\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
