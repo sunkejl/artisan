@@ -1,8 +1,6 @@
 {
   "require": {
     "silex/silex": "~2.0",
-    "laravel/lumen": "*",
-    "laravel/laravel": "^5.4",
     "symfony/http-foundation": "^3.1",
     "symfony/form": "^3.1",
     "symfony/finder": "^3.1",
@@ -23,15 +21,18 @@
     "twig/twig":"~1.0",
     "monolog/monolog":"^1.0",
     "symfony/serializer":"~3.2",
-    "filp/whoops":"^2.1"
+    "symfony/security":"~3.2",
+    "filp/whoops":"^2.1",
+    "swiftmailer/swiftmailer":"*",
+    "predis/predis":"^1.1"
   },
   "autoload": {
     "psr-4": {
-      "Ek\\Controller\\": "Eknus/Controller/",
-      "Ek\\Lib\\": "Eknus/Lib/"
+      "App\\Http\\Controllers\\": "Eknus/app/Http/Controller/",
+      "App\\Providers\\": "Eknus/app/Providers/"
     },
     "psr-0": {
-      "": "Eknus/Model/"
+      "": "Eknus/app/Model/"
     }
   }
 }
