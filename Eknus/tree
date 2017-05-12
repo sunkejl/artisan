@@ -1,0 +1,38 @@
+./
+├── app
+│   ├── Http
+│   │   └── Controller
+│   │       ├── Auriel.php
+│   │       ├── Controller.php
+│   │       └── ProductInfo.php
+│   ├── Model
+│   │   ├── Product.php
+│   │   └── readme.md
+│   ├── Providers
+│   │   ├── Csrf.php
+│   │   ├── Doctrine.php
+│   │   ├── Log.php
+│   │   ├── readme.md
+│   │   ├── Redis.php
+│   │   ├── Session.php
+│   │   ├── SwiftMail.php
+│   │   └── Twig.php
+│   └── Resources
+│       └── views
+│           └── index.html.twig
+├── docs
+│   └── link.md
+├── index.php
+├── READMD.md
+├── route.php
+├── storage
+│   └── upload
+├── tree
+└── var
+    ├── cache
+    │   └── ca
+    │       └── caf4ee6ba45f17659d339e3949648df2bb22e9c0418e38c89a01c56aecaab972.php
+    └── logs
+        └── 2017.log
+
+14 directories, 21 files
