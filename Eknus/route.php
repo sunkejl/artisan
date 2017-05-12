@@ -16,6 +16,14 @@ $routes->add('app', new Routing\Route('/', array(
     '_controller' => '\App\Http\Controllers\Auriel::indexAction',
     //'_controller' => new \Ek\Controller\Auriel(),
 )));
+$routes->add('csrf', new Routing\Route('/csrf', array(
+    'name' => 'csrf',
+    '_controller' => '\App\Http\Controllers\Auriel::setCsrfAction',
+)));
+$routes->add('redis', new Routing\Route('/redis', array(
+    'name' => 'redis',
+    '_controller' => '\App\Http\Controllers\Auriel::setRedisAction',
+)));
 $routes->add('productInsert', new Routing\Route('/product/insert', array(
     'name' => 'productInsert',
     '_controller' => '\App\Http\Controllers\ProductInfo::insert',

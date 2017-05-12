@@ -13,10 +13,19 @@ use Monolog\Logger;
 
 class Log
 {
+    private $stream;
+    private $name;
+
+    public function __construct($stream = "/opt/www/artisan/Eknus/var/logs/2017.log", $name = "name")
+    {
+        $this->stream = $stream;
+        $this->name = $name;
+    }
+
     public function writeLog()
     {
-        $log = new Logger('name');
-        $log->pushHandler(new StreamHandler('/opt/www/artisan/Eknus/var/logs/2017.log', Logger::WARNING));
+        $log = new Logger($this->name);
+        $log->pushHandler(new StreamHandler($this->stream, Logger::WARNING));
 
         return $log;
     }

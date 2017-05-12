@@ -2,20 +2,20 @@
 
 namespace App\Providers;
 
+use Doctrine\DBAL\Configuration;
+use Doctrine\DBAL\DriverManager;
+use Doctrine\ORM\Tools\Setup;
+use Doctrine\ORM\EntityManager;
+
 /**
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2017/5/8
  * Time: 18:29
  */
-class Db
+class Doctrine
 {
-    public $connections;
-
-    public function setConnections($connections)
-    {
-        $this->connections = $connections;
-    }
+    private $connections;
 
     public function __construct(
         array $connections = array(
@@ -31,13 +31,18 @@ class Db
 
     public function getManager()
     {
-        $config = new \Doctrine\DBAL\Configuration();
+        $config = new Configuration();
         $connectionParams = $this->connections;
-        $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
+        $conn = DriverManager::getConnection($connectionParams, $config);
         $isDevMode = true;
-        $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(array(dirname(__DIR__) . "/Model"),
-            $isDevMode, null, null, false);
-        $entityManager = \Doctrine\ORM\EntityManager::create($conn, $config);
+        $config = Setup::createAnnotationMetadataConfiguration(array(dirname(__DIR__) . "/Model"), $isDevMode, null,
+            null, false);
+        $entityManager = EntityManager::create($conn, $config);
         return $entityManager;
+    }
+
+    public function setConnections($connections)
+    {
+        $this->connections = $connections;
     }
 }

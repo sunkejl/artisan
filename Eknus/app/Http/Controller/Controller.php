@@ -12,6 +12,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 abstract class Controller
 {
@@ -24,14 +25,19 @@ abstract class Controller
     public function __construct()
     {
         //依赖注入容器 #避免每次加载都实例化
-        $this->container = new \Symfony\Component\DependencyInjection\ContainerBuilder();
+        $this->container = new ContainerBuilder();
         $this->container->register("doctrine", "App\Providers\Db");
         $this->container->register("twig", "App\Providers\Twig");
         $this->container->register("log", "App\Providers\Log");
         $this->container->register("session", "App\Providers\Session");
-        $this->container->register("mail", "App\Providers\SwiftManager");
+        $this->container->register("mail", "App\Providers\SwiftMail");
         $this->container->register("redis", "App\Providers\Redis");
+        $this->container->register("csrf", "App\Providers\Csrf");
         $this->setContainer($this->container);
+    }
+
+    protected function getCsrf(){
+        return $this->container->get("csrf");
     }
 
     protected function getRedis(){

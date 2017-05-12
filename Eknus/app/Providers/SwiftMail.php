@@ -8,7 +8,7 @@
 
 namespace App\Providers;
 
-class SwiftManager
+class SwiftMail
 {
 
     public function set()
