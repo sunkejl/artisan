@@ -36,26 +36,47 @@ abstract class Controller
         $this->setContainer($this->container);
     }
 
+    /**
+     * @return object
+     */
     protected function getCsrf(){
+        if (!$this->container->has('csrf')) {
+            throw new \LogicException('The csrf is not registered in your application.');
+        }
         return $this->container->get("csrf");
     }
 
+    /**
+     * @return object
+     */
     protected function getRedis(){
+        if (!$this->container->has('redis')) {
+            throw new \LogicException('The redis is not registered in your application.');
+        }
         return $this->container->get("redis");
     }
 
     protected function getMail()
     {
+        if (!$this->container->has('mail')) {
+            throw new \LogicException('The mail is not registered in your application.');
+        }
         return $this->container->get("mail");
     }
 
     protected function getsSession()
     {
+        if (!$this->container->has('session')) {
+            throw new \LogicException('The session is not registered in your application.');
+        }
         return $this->container->get("session");
     }
 
     protected function getLog()
     {
+        if (!$this->container->has('log')) {
+            throw new \LogicException('The log is not registered in your application.');
+        }
         return $this->container->get("log");
     }
 

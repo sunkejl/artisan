@@ -15,8 +15,15 @@ use Doctrine\ORM\EntityManager;
  */
 class Doctrine
 {
+    /**
+     * @var
+     */
     private $connections;
 
+    /**
+     * Doctrine constructor.
+     * @param array $connections
+     */
     public function __construct(
         array $connections = array(
             'dbname' => 'ts',
@@ -29,6 +36,9 @@ class Doctrine
         $this->setConnections($connections);
     }
 
+    /**
+     * @return EntityManager
+     */
     public function getManager()
     {
         $config = new Configuration();
@@ -41,6 +51,9 @@ class Doctrine
         return $entityManager;
     }
 
+    /**
+     * @param $connections
+     */
     public function setConnections($connections)
     {
         $this->connections = $connections;
