@@ -2,18 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Csrf\CsrfToken;
-use Symfony\Component\Security\Csrf\TokenStorage\NativeSessionTokenStorage;
+use Symfony\Component\Yaml\Yaml;
 
 
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/5/5
- * Time: 15:04
- */
 class Auriel extends Controller
 {
     public function indexAction(Request $request)
@@ -39,7 +33,7 @@ class Auriel extends Controller
     {
         $client = $this->getRedis()->getManager();
         $client->select(15);
-        $client->set('foo', 'bar');
+        $client->set('foo', '2017');
         $value = $client->get('foo');
         var_dump($value);
         exit;
@@ -57,5 +51,21 @@ class Auriel extends Controller
     public function mailAction()
     {
         $this->getMail()->set();
+    }
+
+
+    public function dumpYaml()
+    {
+        $array = array(
+            'foo' => 'bar',
+            'bar' => array('foo' => 'bar', 'bar' => 'baz'),
+        );
+        $yaml = Yaml::dump($array);
+        file_put_contents('/opt/www/artisan/Eknus/test.yml', $yaml);
+    }
+
+    public function getNow()
+    {
+        printf("Now: %s", Carbon::now());
     }
 }

@@ -12,20 +12,13 @@ use Predis\Client;
  */
 class Redis
 {
+    use ConfigTrait;
     private $connections;
 
-    /**
-     * Redis constructor.
-     * @param $connections
-     */
-    public function __construct(
-        array $connections = array(
-            'scheme' => 'tcp',
-            'host' => '23.105.217.208',
-            'port' => 6379,
-        )
-    ) {
-        $this->connections = $connections;
+
+    public function __construct()
+    {
+        $this->setConnections($this->getRedisYaml());
     }
 
 
@@ -33,5 +26,13 @@ class Redis
     {
         $client = new Client($this->connections);
         return $client;
+    }
+
+    /**
+     * @param mixed $connections
+     */
+    public function setConnections($connections)
+    {
+        $this->connections = $connections;
     }
 }

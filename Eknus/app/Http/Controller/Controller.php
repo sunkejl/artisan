@@ -26,7 +26,7 @@ abstract class Controller
     {
         //依赖注入容器 #避免每次加载都实例化
         $this->container = new ContainerBuilder();
-        $this->container->register("doctrine", "App\Providers\Db");
+        $this->container->register("doctrine", "App\Providers\Doctrine");
         $this->container->register("twig", "App\Providers\Twig");
         $this->container->register("log", "App\Providers\Log");
         $this->container->register("session", "App\Providers\Session");

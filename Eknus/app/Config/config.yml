@@ -1,0 +1,25 @@
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "23.105.217.208"
+        port:     "3306"
+        dbname:   "ts"
+        user:     "root"
+        password: "123456"
+        charset:  UTF8
+
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "25"
+    host:      "smtp.sina.com"
+    username:  "sunkejl@sina.com"
+    password:  "******"
+    spool:     { type: memory }
+
+# Redis Configuration
+redis:
+    scheme: "tcp"
+    host:   "23.105.217.208"
+    port:   "6379"

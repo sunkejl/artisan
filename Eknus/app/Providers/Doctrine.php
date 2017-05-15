@@ -15,25 +15,16 @@ use Doctrine\ORM\EntityManager;
  */
 class Doctrine
 {
+    use ConfigTrait;
     /**
      * @var
      */
     private $connections;
 
-    /**
-     * Doctrine constructor.
-     * @param array $connections
-     */
-    public function __construct(
-        array $connections = array(
-            'dbname' => 'ts',
-            'user' => 'root',
-            'password' => '123456',
-            'host' => '23.105.217.208',
-            'driver' => 'pdo_mysql',
-        )
-    ) {
-        $this->setConnections($connections);
+
+    public function __construct()
+    {
+        $this->setConnections($this->getDoctrineYaml());
     }
 
     /**

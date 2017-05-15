@@ -1,5 +1,7 @@
 ./
 ├── app
+│   ├── Config
+│   │   └── config.yml
 │   ├── Http
 │   │   └── Controller
 │   │       ├── Auriel.php
@@ -9,6 +11,7 @@
 │   │   ├── Product.php
 │   │   └── readme.md
 │   ├── Providers
+│   │   ├── ConfigTrait.php
 │   │   ├── Csrf.php
 │   │   ├── Doctrine.php
 │   │   ├── Log.php
@@ -35,4 +38,4 @@
     └── logs
         └── 2017.log
 
-14 directories, 21 files
+15 directories, 23 files
