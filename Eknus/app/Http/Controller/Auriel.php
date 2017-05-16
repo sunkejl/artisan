@@ -15,17 +15,28 @@ class Auriel extends Controller
         return $this->render("index.html.twig", array("name" => "sk"));
     }
 
+    public function encode()
+    {
+        $array = range("a", "z");
+        return new Response($this->getSerializer()->encode($array));
+    }
+
+    public function decode()
+    {
+        $this->getSerializer()->decode();
+    }
+
     public function setLog()
     {
-        $this->getLog()->writeLog()->error(222);
-        $this->getLog()->writeLog()->warning(222);
+        $this->getLog()->writeLog()->error("error");
+        $this->getLog()->writeLog()->warning("warning");
         exit;
     }
 
     public function getSession()
     {
-        $this->getsSession()->getManager()->set("a", 1133);
-        var_dump($this->getsSession()->getManager()->get("a"));
+        $this->getsSession()->getManager()->set("name","sk");
+        var_dump($this->getsSession()->getManager()->get("name"));
         exit;
     }
 
@@ -33,7 +44,7 @@ class Auriel extends Controller
     {
         $client = $this->getRedis()->getManager();
         $client->select(15);
-        $client->set('foo', '2017');
+        $client->set('foo', 'bar');
         $value = $client->get('foo');
         var_dump($value);
         exit;

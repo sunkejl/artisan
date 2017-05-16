@@ -27,6 +27,7 @@ abstract class Controller
         //依赖注入容器 #避免每次加载都实例化
         $this->container = new ContainerBuilder();
         $this->container->register("doctrine", "App\Providers\Doctrine");
+        $this->container->register("serializer", "App\Providers\SerializerProvider");
         $this->container->register("twig", "App\Providers\Twig");
         $this->container->register("log", "App\Providers\Log");
         $this->container->register("session", "App\Providers\Session");
@@ -34,6 +35,9 @@ abstract class Controller
         $this->container->register("redis", "App\Providers\Redis");
         $this->container->register("csrf", "App\Providers\Csrf");
         $this->setContainer($this->container);
+    }
+    protected function getSerializer(){
+        return $this->container->get("serializer");
     }
 
     /**
