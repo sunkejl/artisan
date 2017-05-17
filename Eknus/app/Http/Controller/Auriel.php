@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\Yaml\Yaml;
 
 
@@ -12,7 +13,13 @@ class Auriel extends Controller
 {
     public function indexAction(Request $request)
     {
+
         return $this->render("index.html.twig", array("name" => "sk"));
+    }
+
+    public function equal()
+    {
+        var_dump($a = "abc");#abc
     }
 
     public function encode()
@@ -35,7 +42,7 @@ class Auriel extends Controller
 
     public function getSession()
     {
-        $this->getsSession()->getManager()->set("name","sk");
+        $this->getsSession()->getManager()->set("name", "sk");
         var_dump($this->getsSession()->getManager()->get("name"));
         exit;
     }

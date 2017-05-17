@@ -36,7 +36,7 @@ class Doctrine
         $connectionParams = $this->connections;
         $conn = DriverManager::getConnection($connectionParams, $config);
         $isDevMode = true;
-        $config = Setup::createAnnotationMetadataConfiguration(array(dirname(__DIR__) . "/Model"), $isDevMode, null,
+        $config = Setup::createAnnotationMetadataConfiguration(array(dirname(__DIR__) . "/Entity"), $isDevMode, null,
             null, false);
         $entityManager = EntityManager::create($conn, $config);
         return $entityManager;

@@ -33,7 +33,7 @@
       "App\\Providers\\": "Eknus/app/Providers/"
     },
     "psr-0": {
-      "": "Eknus/app/Model/"
+      "": "Eknus/app/Entity/"
     }
   }
 }
