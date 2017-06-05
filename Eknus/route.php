@@ -11,6 +11,10 @@ use Symfony\Component\Routing;
 //include "Controller/Auriel.php";
 
 $routes = new Routing\RouteCollection();
+$routes->add('h', new Routing\Route('/h', array(
+    'name' => 'appName',
+    '_controller' => '\App\Http\Controllers\HeroOfStorm\Heroes::indexAction',
+)));
 $routes->add('app', new Routing\Route('/', array(
     'name' => 'appName',
     '_controller' => '\App\Http\Controllers\Auriel::indexAction',
