@@ -68,14 +68,14 @@ class Heroes extends Controller
         $curl = new Curl();
         $entityManager = $this->getDoctrine()->getManager();
         $gameListRepository = $entityManager->getRepository("GameList");
-        for ($uid = 0; $uid < 11084926; $uid++) {
+
+        for ($uid = 0; $uid < 31084926; $uid++) {
             echo $uid;
             #$uid = "11084926";
             $curl->get("http://sh.hosapp.blz.netease.com/hosapp-1.0/game/list?uid=$uid&hero=&mapId=0&gameMode=0&pageSize=200&pageNum=1");
             $gameListInfo = json_decode($curl->response, true);
             if (empty($pageTotal = $gameListInfo["pageTotal"])) {
-                echo "containue";
-                exit;
+                continue;
             }
             for ($i = 1; $i <= $pageTotal; $i++) {
                 $curl->get("http://sh.hosapp.blz.netease.com/hosapp-1.0/game/list?uid=$uid&hero=&mapId=0&gameMode=0&pageSize=20&pageNum=1");
@@ -87,7 +87,7 @@ class Heroes extends Controller
 
                 foreach ($gameListInfo['list'] as $v) {
                     extract($v);
-                    if (empty($databaseResult = $gameListRepository->findOneBy(['advert_handle_object_id' => "{$advertHandle['objectId']}"]))) {
+                    if (empty($databaseResult = $gameListRepository->findOneBy(['advert_handle_object_id' => "{$advertHandle['objectId']}",'uid'=>"$uid"]))) {
                         $gameList = new \GameList();
                         $gameList
                             ->setUid($uid)
