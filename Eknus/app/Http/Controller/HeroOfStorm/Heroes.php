@@ -110,7 +110,6 @@ class Heroes extends Controller
                             ->setCreatedAt();
                         $entityManager->persist($gameList);
                         $entityManager->flush();
-                        exit;
                     } else {
                         $databaseResult
                             ->setUid($uid)

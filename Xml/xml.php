@@ -50,4 +50,21 @@ class xml
 $x = new xml();
 $x->xmlToArray();
 
+class XmlEtc
+{
+    function xml()
+    {
+        $body = "";
+        $xml = new SimpleXMLElement($body);
+        $requestArray = json_decode(json_encode($xml), true);
+
+        $xmlObj = new SimpleXMLElement("<request></request>");
+        $xmlDeliveryOrder = $xmlObj->addChild("deliveryOrder");
+        $xmlDeliveryOrder->addChild("freight", "22");
+        $body = $xmlObj->asXML();
+
+        $body = file_get_contents("php://input");
+    }
+}
+
 
