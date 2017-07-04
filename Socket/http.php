@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/5/27
- * Time: 15:58
+ * socket 模拟get请求
  */
 error_reporting(E_ALL);
 
