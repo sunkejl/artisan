@@ -23,6 +23,7 @@ EOD;
 
 
 $ip = "127.0.0.1";
+$ip = "172.16.54.110";
 $port = $argv[1];
 $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 socket_connect($socket, $ip, $port);

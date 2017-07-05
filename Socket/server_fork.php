@@ -7,6 +7,7 @@
  */
 
 $ip = "127.0.0.1";
+$ip = "172.16.54.110";
 $port = $argv[1];
 $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 socket_bind($socket, $ip, $port);
@@ -18,6 +19,7 @@ do {
     //子进程
     if ($pid == 0) {
         socket_write($client, "welcome", 256);
+        socket_close($client);
         do {
             if (false == ($buffer = socket_read($client, 255, PHP_NORMAL_READ))) {
                 echo "break";
