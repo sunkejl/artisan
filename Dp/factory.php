@@ -37,3 +37,44 @@ class AutomobileFactory
 $obj = AutomobileFactory::create('Bugatti', 'V');
 
 print_r($obj->getMakeAndModel()); // outputs "Bugatti V"
+
+/**       */
+interface Sharp
+{
+    function draw();
+}
+
+class Square implements Sharp
+{
+    function draw()
+    {
+        return "square";
+    }
+}
+
+class Circle implements Sharp
+{
+    function draw()
+    {
+        return "circle";
+    }
+}
+
+class SharpFactory
+{
+    function getSharp($sharpType)
+    {
+        switch ($sharpType) {
+            case "1":
+                return new Square();
+                break;
+            case "2";
+                return new Circle();
+                break;
+
+        }
+    }
+}
+
+$sharpFactory = new SharpFactory();
+$square = $sharpFactory->getSharp("square")->draw();

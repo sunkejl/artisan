@@ -22,6 +22,7 @@ class Singleton
     }
 
     /**
+     * SingleObject class have its constructor as private and have a static instance of itself.
      * 把构造函数声明为 protected，防止用 `new` 操作符在这个类之外创建新的实例
      */
     protected function __construct()
