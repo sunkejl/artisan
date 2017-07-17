@@ -1,3 +1,5 @@
+decoupled(解耦)
+
 design patterns are primarily based on the following principles of object orientated design.
 Program to an interface not an implementation
 Favor object composition over inheritance
@@ -6,14 +8,15 @@ Favor object composition over inheritance
 Creational Patterns
 These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.
 This gives program more flexibility in deciding which objects need to be created for a given use case.
->>>Factory pattern  Singleton pattern  Prototype pattern
+>>>Factory pattern | Singleton pattern |  Prototype pattern
 
 
 
 Structural Patterns
 These design patterns concern class and object composition.
 Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.
->>>Adapter pattern
+>>>Adapter pattern | Bridge pattern | Filter pattern | Facade pattern | Flyweight pattern | Proxy pattern
 
 Behavioral Patterns
 These design patterns are specifically concerned with communication between objects.
+>>>chainOfResponsibility pattern

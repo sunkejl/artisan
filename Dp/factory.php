@@ -8,6 +8,7 @@
  * 其次，如果创建对象的过程很复杂，你也只需要在工厂类中写，而不是在每个创建实例的地方重复地写。
  *
  */
+namespace Dp\factory;
 class Automobile
 {
     private $vehicleMake;
@@ -39,12 +40,12 @@ $obj = AutomobileFactory::create('Bugatti', 'V');
 print_r($obj->getMakeAndModel()); // outputs "Bugatti V"
 
 /**       */
-interface Sharp
+interface Shape
 {
     function draw();
 }
 
-class Square implements Sharp
+class Square implements Shape
 {
     function draw()
     {
@@ -52,7 +53,7 @@ class Square implements Sharp
     }
 }
 
-class Circle implements Sharp
+class Circle implements Shape
 {
     function draw()
     {
@@ -60,11 +61,11 @@ class Circle implements Sharp
     }
 }
 
-class SharpFactory
+class ShapeFactory
 {
-    function getSharp($sharpType)
+    function getShape($shapeType)
     {
-        switch ($sharpType) {
+        switch ($shapeType) {
             case "1":
                 return new Square();
                 break;
@@ -76,5 +77,5 @@ class SharpFactory
     }
 }
 
-$sharpFactory = new SharpFactory();
-$square = $sharpFactory->getSharp("square")->draw();
+$sharpFactory = new ShapeFactory();
+$square = $sharpFactory->getShape("square")->draw();
