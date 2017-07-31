@@ -72,7 +72,7 @@ class ErrorLogger extends AbstractLogger
 
     function write($message)
     {
-        echo __CLASS__ . $message . "\n";
+        echo __CLASS__ . $message . PHP_EOL;
     }
 }
 

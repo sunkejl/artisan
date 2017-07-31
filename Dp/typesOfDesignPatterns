@@ -19,4 +19,5 @@ Concept of inheritance is used to compose interfaces and define ways to compose 
 
 Behavioral Patterns
 These design patterns are specifically concerned with communication between objects.
->>>chainOfResponsibility pattern
+>>>chainOfResponsibility pattern | Command pattern | Interpreter pattern |Mediator pattern | Memento Pattern
+  | Observer pattern | Null Object pattern |Strategy pattern |Template pattern | Visitor Pattern
