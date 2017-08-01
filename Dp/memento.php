@@ -4,6 +4,7 @@
  * Memento(备忘录)
  * Originator(鼻祖)
  * Class Memento
+ * Memento pattern is used to restore state of an object to a previous state
  */
 class Memento
 {
