@@ -1,5 +1,6 @@
 <?php
 /**
+ * 一个类别可以作为其它类的接口
  * In proxy pattern, a class represents functionality of another class.
  * create object having original object to interface its functionality to outer world.
  */

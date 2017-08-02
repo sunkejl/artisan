@@ -1,6 +1,6 @@
 <?php
 /**
- * Filter pattern or Criteria pattern is a design pattern that enables developers to filter a set of objects using different criteria
+ * Filter pattern or Criteria pattern is a design pattern that enables developers to filter a set of objects using different criteria(标准)
  * and chaining them in a decoupled way through logical operations.
  * Criteria(标准)
  * 采用解耦的方式进行验证

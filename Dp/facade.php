@@ -2,7 +2,7 @@
 /**
  * Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system.
  * this pattern adds an interface to existing system to hide its complexities.
- *  门面模式
+ *  外观 模式  对外提供统一的接口 把具体的实现隐藏起来
  */
 
 namespace Dp\Facde;
