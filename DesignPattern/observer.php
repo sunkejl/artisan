@@ -1,7 +1,8 @@
 <?php
 /**
+ * 观察者 在对象间定义一个一对多的联系性，由此当一个对象改变了状态，所有其他相关的对象会被通知并且自动刷新。
  * observer pattern is used when there is one-to-many relationship between objects such as if one object is modified,
- * its depenedent objects are to be notified automatically.
+ * its dependent objects are to be notified automatically.
  */
 
 namespace Dp\observer;

@@ -1,10 +1,6 @@
 <?php
 /**
  * link https://packagist.org/packages/curl/curl
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2016/10/25
- * Time: 11:27
  */
 require 'vendor/autoload.php';
 $curl = new Curl\Curl();

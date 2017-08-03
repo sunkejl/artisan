@@ -2,7 +2,8 @@
 
 /**
  * interpret(翻译)
- * Interpreter pattern provides a way to evaluate language grammar or expression.
+ * 定义语言的语法，并由解释器来解释语言中的语句 常用于sql解析
+ * Interpreter pattern provides a way to evaluate(估价) language grammar or expression.
  * This pattern is used in SQL parsing, symbol processing engine etc.
  */
 interface Expression

@@ -1,5 +1,6 @@
 <?php
 /**
+ * 通过提供默认对象来避免空引用。
  * a null object replaces check of NULL object instance.
  * Instead of putting if check for a null value, Null Object reflects a do nothing relationship
  */

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/4/5
- * Time: 14:18
- */
 header("Content-Type: text/json");
 header("Server: nginx/2017");
 header("Date: 2017");
@@ -19,6 +13,7 @@ header("Set-Cookie:u_b=23");
 
 //拿到的直接就是json格式
 //{ "name": 23, "age": 33 }
-echo (file_get_contents('php://input'));exit;
+echo(file_get_contents('php://input'));
+exit;
 
 

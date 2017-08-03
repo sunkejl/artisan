@@ -2,6 +2,7 @@
 
 /**
  * 责任链
+ * 解耦一个请求中的发送和接收，每个接收对象含有下一个接受对象,处理的命令对象传递给该链中的下一个处理对象
  * the chain of responsibility pattern creates a chain of receiver objects for a request.
  * This pattern decouples sender and receiver of a request based on type of request.
  * normally each receiver contains reference to another receiver.

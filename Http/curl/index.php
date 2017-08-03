@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2016/10/25
- * Time: 9:43
- */
-
 // 创建一个新cURL资源
 $ch = curl_init();
 
