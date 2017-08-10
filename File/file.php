@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/6/27
- * Time: 9:57
- */
 //r read | r+ read write
 //w write; truncates file;not exist create;places the file pointer at the beginning of the file. | w+  write read
 //a write;not exist create;places the file pointer at the end  of the file.
