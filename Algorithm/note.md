@@ -44,6 +44,25 @@ Update − Algorithm to update an existing item in a data structure.
 
 Delete − Algorithm to delete an existing item from a data structure.
 
+####time required 
+
+Best Case − Minimum time required for program execution.
+
+Average Case − Average time required for program execution.
+
+Worst Case − Maximum time required for program execution.
 
 
+Ο Notation  Oh  worst case 
+Ω Notation  Omega  best case
+θ Notation  Theta 
 
+####common asymptotic notations
+constant	−	Ο(1)
+logarithmic	−	Ο(logn)
+linear	−	Ο(n)
+n log n	−	Ο(nlogn)
+quadratic	−	Ο(n2)
+cubic	−	Ο(n3)
+polynomial(多项式)	−	nΟ1
+exponential(指数)	−	2Οn
