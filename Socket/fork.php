@@ -49,5 +49,5 @@ function process_execute($input)
 }
 
 
-//Process Control should not be enabled within a webserver environment and unexpected results may happen if any Process Control functions are used within a webserver environment.
+//Process Control should not be enabled within a web server environment and unexpected results may happen if any Process Control functions are used within a web server environment.
 //web 开发无法使用多进程

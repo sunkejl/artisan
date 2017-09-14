@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/6/27
- * Time: 16:28
- */
 try {
     throw new Exception("error", 1);
 } catch (Exception $e) {

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/6/27
- * Time: 15:17
- */
 session_start();
 $_SESSION['name'] = serialize(["name" => 1, "age" => 2, "country" => 3]);
 var_dump($_COOKIE);
