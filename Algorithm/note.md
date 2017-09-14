@@ -166,6 +166,7 @@ In doubly linked list, the next pointer of the last node points to the first nod
  Prefix (Polish) Notation 前缀 ++a
  Postfix (Reverse-Polish) Notation 后缀 b++
  
+<<<<<<< HEAD
  利用栈 进行+ - * / 的计算 
  将操作数压入操作数栈(zhan)
  将运算符压入运算符栈
@@ -173,6 +174,9 @@ In doubly linked list, the next pointer of the last node points to the first nod
  遇到右括号是 弹出一个运算符号 弹出所需数量的操作数 将运算符和操作数的运算结果压入操作数栈
  todo 需要全部用括号扩起来
  (1+((2*3)+(3*3))
+=======
+ 利用栈 进行+ - * / 的计算 todo
+>>>>>>> 544a6d60dd74f3b7e2082d028f490b3cc56f0586
  
  ####Queue
  Queue is an abstract data structure
@@ -231,6 +235,7 @@ In doubly linked list, the next pointer of the last node points to the first nod
     }
  ```
  
+<<<<<<< HEAD
 ####insertion sort 
 find its appropriate place and then it has to be inserted there.
 worst case complexity are of Ο(n2),
@@ -255,6 +260,8 @@ worst-case time complexity being Ο(n log n),
  
 
  
+=======
+>>>>>>> 544a6d60dd74f3b7e2082d028f490b3cc56f0586
  
  
  
