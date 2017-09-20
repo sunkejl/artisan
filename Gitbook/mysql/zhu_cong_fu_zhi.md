@@ -1,0 +1,298 @@
+
+主动从复制
+
+[课程地址](http://mooc.study.163.com/learn/NEU-1000080002?tid=2001223006#/learn/content?type=detail&id=2001414096)
+
+一主一从
+
+主主复制
+
+一主多从
+
+多主一从
+
+联机复制
+
+用途
+线上出现问题 ，切换到从库 继续提供服务
+
+从库读服务
+读写分离
+
+备份从库
+
+主从部署条件
+主库开启binlog 设置log-bin参数 打开binlog日志
+主从server-id不同 如果serverid相同 从库不会复制主库数据
+从库可以连接主库
+ip a 查看ip
+
+
+主从部署步骤
+备份还原 mysqldump或xtrabackup
+授权
+配置复制 并启动
+查看主从复制信息
+
+flush privileges;#刷新权限
+
+-A 备份所有数据库 --master-data备份位置记录到文件中
+先
+mysqldump -uroot -p123456 --socket=/data/mysql/node1/mysqld.sock --single-transaction -A --master-data=1 > all_db.sql
+CHANGE MASTER TO MASTER_LOG_FILE='mysql_bin.000002', MASTER_LOG_POS=2314;
+
+
+从107远程登录108 执行 
+source /data/all_db.sql
+
+在主库上授权具有复制权限的用户
+grant replication slave on *.* to repl@'（192.168.1.207)' identified by 'repl';
+grant replication slave on *.* to repl@'192.168.1.207' identified by 'repl';
+
+主库117
+从库207
+从库上
+? change master to #查看主从同步帮助命令
+CHANGE MASTER TO MASTER_HOST='192.168.1.117',MASTER_USER='repl',MASTER_PASSWORD='repl',MASTER_PORT=3306,MASTER_LOG_FILE='mysql_bin.000001',MASTER_LOG_POS=1793;
+
+CHANGE MASTER TO MASTER_HOST='192.168.1.117',MASTER_USER='repl',MASTER_PASSWORD='repl',MASTER_PORT=3306,MASTER_LOG_FILE='mysql_bin.000002', MASTER_LOG_POS=2314;
+
+//MASTER_LOG_FILE='mysql_bin.000001',MASTER_LOG_POS=1793;为备份的时候备份位置 从备份sql里找到
+start slave;
+show slave status\G
+
+从库生产俩个线程 IO线程和sql线程
+IO线程(thread)和主库连接 请求主库binlog 主库收到IO线程 生成binlogdump线程 返回给IO线程 IO线程把binlog存在relaylog中
+sql线程解析relylog并在从库上应用
+
+主库show processlist;
+可以看到 一个线程 一直在binlog dump
+从库show processlist;
+俩个线程
+
+存在的问题
+同步操作为异步进行 主库传过去就返回 不知道从库是否更新  主库宕机了 数据丢失
+主库压力大 从库复制可能延时
+
+解决办法 
+半同步复制
+并行复制
+
+show plugins;查看插件
+安装 semi_sync插件
+
+部分复制
+在从库的my.conf里
+写replicate_do_db=db2
+
+联级复制
+A B C  B复制A的Binlog C复制B也能复制A
+参数 log_slave_update 从库上记录binlog日志
+
+复制监控
+show slave status\G
+
+
+复制出错
+set global sql_slave_skip_counter=1 #跳过复制出错
+
+1062 主键冲突
+1032 记录不存在
+手动处理 建表 插入数据
+
+
+主从复制 是高可用 高性能 负载均衡 的基础
+
+问题
+主库挂了 从库丢失 
+主库压力大 从库跟不上
+部署 半同步复制 和 多线程复制
+
+
+
+
+————————————————————————
+演示代码
+1.主从异步复制搭建
+1)主库全备，备库恢复
+mysqldump -uroot -p123456 --socket=/data/mysql/node1/mysqld.sock --single-transaction -A --master-data=1 > all_db.sql
+mysql -utest -ptest -h(从库IP) -P3306 
+mysql>source all_db.sql;
+2)主库授权用户
+grant replication slave on *.* to repl@'(从库IP)' identified by 'repl';
+3)从库配置复制
+less all_db.sql|grep "change master to"
+change master to master_host='(主库IP)',master_user='repl',master_password='repl',master_log_file='XXX',master_log_pos=XXX;
+start stave;
+show slave status\G
+4)复制检验
+主库：
+use db1;
+insert into t1 values(10);
+从库：
+use db1;
+select * from t1;(获得数据)
+主库：
+drop database db2;
+从库：
+show databases;(显示db2被删除)
+5)查看线程
+主库：show processlist;(dump线程)
+从库：show processlist;(IO线程、SQL线程)
+6)查看日志
+从库：cd /data/mysql/node1
+cat master.info
+cat relay-log.info
+2.主从半同步复制安装
+1)主库安装插件
+show plugins;
+install PLUGIN rpl_semi_sync_master SONAME 'semisync_master.so'; 
+2)从库安装插件
+show plugins;
+INSTALL PLUGIN rpl_semi_sync_slave SONAME 'semisync_slave.so';
+3)参数设置
+主库：
+show variables like '%semi%';
+SET GLOBAL rpl_semi_sync_master_enabled=1;
+从库：
+SET GLOBAL rpl_semi_sync_slave_enabled=1;
+4)重启主从复制
+从库：
+stop slave;
+start slave;
+5)状态检查
+show global status like '%semi%';
+6)复制检查
+主库：
+use db1;
+insert into t1 values(100);
+从库：
+use db1;
+select * from t1;(获得数据)
+7)测试延迟
+从库：
+stop slave;
+主库：
+use db1;
+insert into t1 values(1);(被卡10s)
+set global rpl_semi_sync_master_timeout=1000;
+从库：
+start slave;
+stop slave;
+主库：
+use db1;
+insert into t1 values(88);(被卡1s)
+
+
+————————————————————
+1.MySQL并行复制
+从库：
+show variable like '%slave_par%'
+set global slave_parallel_workers=10; 设置sql线程数为10
+stop slave;
+start slave;
+show processlist;(十个worker线程)
+2.部分复制
+1)主库：
+create database db2;
+2)从库部分复制配置
+#vim /data/mysql/my1.cnf(replicate_do_db=db2)
+#mysqladmin -uroot --socket=XXX --port=3306 -p123456 shutdown
+#/usr/local/mysql/bin/mysqld_safe --defaults-file=/data/mysql/my1.cnf &
+show slave status;
+3)测试
+主库：
+use db1;
+delete from t1;
+从库：
+use db1;
+select * from t1;(任然保留数据)
+主库：
+use db2;
+create table user(a int,b int);
+从库：
+use db2;
+show tables;(查看到user表)
+3.联级复制
+1)从库：
+#vim /data/mysql/my1.cnf(log_slave_updates)
+#mysqladmin -uroot --socket=XXX --port=3306 -p123456 shutdown
+#/usr/local/mysql/bin/mysqld_safe --defaults-file=/data/mysql/my1.cnf &
+2)创建新实例
+在主库服务器上创建一个从库2实例
+#mysqladmin -uroot --socket=XXX --port=3306 -p123456 shutdown
+#kill -9 (mysqld_safe进程号)
+#cp -r node1 node2
+#vim my.cnf(修改相关参数,端口3307)
+#chown -R mysql.mysql node2
+#/usr/local/mysql56/bin/mysqld_safe --defaults-file=/data/mysql/my1.cnf &
+#/usr/local/mysql56/bin/mysqld_safe --defaults-file=/data/mysql/my2.cnf &
+#mysqldump -utest -ptest -hXXX -P3306 -A --master-data=1 > d731.sql(dump从库1的全备)
+#mysql -uroot --socket=/data/mysql/node2/mysqld.sock -p123456 < d731.sql
+3)配置从1和从2的主从
+从1授权：
+grant replication slave on *.* to repl@'(从2IP)' identified by 'repl';
+从2配置复制：
+less d731.sql|grep "change master to"
+change master to master_host='(从1IP)',master_user='repl',master_password='repl',master_log_file='XXX',master_log_pos=XXX;
+start stave;
+show slave status\G
+show processlist;
+4)联级复制测试
+主库：
+create database db3;
+从1：
+show databases;(获得新建库)
+从2：
+show databases;(获得新建库)
+4.监控主从复制
+show slave status\G
+5.复制出错处理(数据不一致问题
+从库t1有数据，主库t1无数据情况下
+主库：insert into t1 values(1);
+从库：show slave status\G(1062错误)
+[处理]
+a.从库删除记录：
+delete from t1 where id=1;
+start slave;
+b.从库跳过错误：
+show variables like '%counter%';
+set global sql_slave_skip_counter=1;
+stop slave;
+start slave;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mysql> show global variables like "%log_bin%";
++---------------------------------+----------------------+
+| Variable_name                   | Value                |
++---------------------------------+----------------------+
+| log_bin                         | ON                   |
+| log_bin_basename                | /tmp/mysql_bin       |
+| log_bin_index                   | /tmp/mysql_bin.index |
+| log_bin_trust_function_creators | OFF                  |
+| log_bin_use_v1_row_events       | OFF    
+
+
+
+
+
+
+

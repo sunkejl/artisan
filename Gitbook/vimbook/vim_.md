@@ -1,0 +1,2 @@
+%s/type/new/g  
+

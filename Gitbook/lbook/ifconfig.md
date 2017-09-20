@@ -1,0 +1,4 @@
+yum install net-tools
+
+
+
