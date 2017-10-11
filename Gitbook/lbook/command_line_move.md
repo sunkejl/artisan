@@ -1,6 +1,6 @@
 CTRL + F   往后移动
 
- CTRL + B   往前移动 
+CTRL + B   往前移动 
 
 CTRL + U – 剪切光标前的内容 
 
