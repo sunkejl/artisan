@@ -1,9 +1,5 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/6/27
- * Time: 16:39
  * link:https://www.tutorialspoint.com/php/php_date_and_time.htm
  */
 $dateArray=getdate();

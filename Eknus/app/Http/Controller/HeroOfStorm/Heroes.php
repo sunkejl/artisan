@@ -78,7 +78,7 @@ class Heroes extends Controller
                 continue;
             }
             for ($i = 1; $i <= $pageTotal; $i++) {
-                $curl->get("http://sh.hosapp.blz.netease.com/hosapp-1.0/game/list?uid=$uid&hero=&mapId=0&gameMode=0&pageSize=20&pageNum=1");
+                $curl->get("http://sh.hosapp.blz.netease.com/hosapp-1.0/game/list?uid=$uid&hero=&mapId=0&gameMode=0&pageSize=200&pageNum=1");
                 if ($curl->error) {
                     exit($curl->error_code);
                 } else {

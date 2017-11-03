@@ -1,16 +1,19 @@
-####Characteristics of a Data Structure
+####Characteristics of a Data Structure 数据结构特征
 
 Correctness − Data structure implementation should implement its interface correctly.
+正确性
 
 Time Complexity(复杂度) − Running time or the execution time of operations of data structure must be as small as possible.
+时间复杂度
 
 Space Complexity − Memory usage of a data structure operation should be as little as possible.
+空间复杂度
 
 * Worst Case
 * Average Case 
 * Best Case
 
-####Basic Terminology
+####Basic Terminology 基本术语
 
 Data − Data are values or set of values.
 
@@ -30,7 +33,8 @@ Record − Record is a collection of field values of a given entity.
 
 File − File is a collection of records of the entities in a given entity set.
 
-####categories(类别) of algorithms 
+####categories(类别) of algorithms  算法类别
+搜索 排序 插入 更新 删除
 
 * Search − Algorithm to search an item in a data structure.
 * Sort − Algorithm to sort items in a certain order.
@@ -38,7 +42,7 @@ File − File is a collection of records of the entities in a given entity set.
 * Update − Algorithm to update an existing item in a data structure.
 * Delete − Algorithm to delete an existing item from a data structure.
 
-####time required 
+####time required 时间
 * Best Case − Minimum time required for program execution.
 * Average Case − Average time required for program execution.
 * Worst Case − Maximum time required for program execution.
@@ -50,7 +54,7 @@ File − File is a collection of records of the entities in a given entity set.
 |Ω | Notation | Omega | best case|
 |θ | Notation  | Theta | |
 
-####common asymptotic notations
+####common asymptotic notations 常用符号发言
 * constant	−	Ο(1)
 * logarithmic	−	Ο(logn)
 * linear	−	Ο(n)
@@ -60,7 +64,7 @@ File − File is a collection of records of the entities in a given entity set.
 * polynomial(多项式)	−	nΟ1
 * exponential(指数)	−	2Οn
 
-####divide and conquer
+####divide and conquer  分治
 
 Divide/Break
 breaking the problem into smaller sub-problems.
@@ -73,12 +77,11 @@ Merge/Combine
 this stage recursively combines them until they formulate a solution of the original problem. 
 This algorithmic approach works recursively and conquer & merge steps works so close that they appear as one.
 
-Examples
-
+Examples例子
 The following computer algorithms are based on divide-and-conquer programming approach 
-* Merge Sort
-* Quick Sort
-* Binary Search
+* Merge Sort 合并排序
+* Quick Sort 快速排序
+* Binary Search 二分查找
 
 ####DATA STRUCTURES
 
@@ -166,7 +169,6 @@ In doubly linked list, the next pointer of the last node points to the first nod
  Prefix (Polish) Notation 前缀 ++a
  Postfix (Reverse-Polish) Notation 后缀 b++
  
-<<<<<<< HEAD
  利用栈 进行+ - * / 的计算 
  将操作数压入操作数栈(zhan)
  将运算符压入运算符栈
@@ -174,9 +176,6 @@ In doubly linked list, the next pointer of the last node points to the first nod
  遇到右括号是 弹出一个运算符号 弹出所需数量的操作数 将运算符和操作数的运算结果压入操作数栈
  todo 需要全部用括号扩起来
  (1+((2*3)+(3*3))
-=======
- 利用栈 进行+ - * / 的计算 todo
->>>>>>> 544a6d60dd74f3b7e2082d028f490b3cc56f0586
  
  ####Queue
  Queue is an abstract data structure
@@ -235,7 +234,6 @@ In doubly linked list, the next pointer of the last node points to the first nod
     }
  ```
  
-<<<<<<< HEAD
 ####insertion sort 
 find its appropriate place and then it has to be inserted there.
 worst case complexity are of Ο(n2),
@@ -258,10 +256,37 @@ worst-case time complexity being Ο(n log n),
  divide these two arrays into halves
  achieve atomic value which can no more be divided
  
+####Shell sort
+shell sort is a highly efficient sorting algorithm and is based on insertion sort algorithm. 
+This algorithm avoids large shifts as in case of insertion sort, 
+if the smaller value is to the far right and has to be moved to the far left.
+
+####Quick sort
+Quick sort is a highly efficient sorting algorithm and is based on partitioning of array of data into smaller arrays. 
+A large array is partitioned into two arrays one of which holds values smaller than the specified value,
+say pivot, based on which the partition is made and another array holds values greater than the pivot value.
+
+Quick sort partitions an array and then calls itself recursively twice to sort the two resulting subarrays.
+This algorithm is quite efficient for large-sized data sets as its average and worst case complexity are of Ο(n2),
+where n is the number of items.
+
+####Binary Tree
+binary tree is a special data structure used for data storage purposes. 
+binary tree has a special condition that each node can have a maximum of two children.每个节点最多有俩个子树
+A binary tree has the benefits of both an ordered array and
+a linked list as search is as quick as in a sorted array and
+insertion or deletion operation are as fast as in linked list.
+
+####Binary Search tree 二叉搜索树
+Binary Search tree exhibits a special behavior. 
+A node's left child must have a value less than its parent's value and
+the node's right child must have a value greater than its parent value.
+若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 
+若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 
+它的左、右子树也分别为二叉排序树。
+ 
 
  
-=======
->>>>>>> 544a6d60dd74f3b7e2082d028f490b3cc56f0586
  
  
  

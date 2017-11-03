@@ -14,3 +14,10 @@ console.log\(2 in a\);//true 键
 
 console.log\(5 in a\); // false
 
+```javascript
+const locationds = ['Austin', 'New York', 'San Francisco'];
+locationds.forEach((locationd) => {
+console.log(locationd);
+});
+```
+
