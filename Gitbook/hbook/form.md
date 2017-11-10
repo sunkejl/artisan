@@ -1,6 +1,6 @@
 # form
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>

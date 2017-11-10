@@ -1,13 +1,5 @@
 <?php
 
-$hash=hash("sha256",123);
-var_dump($hash);
-var_dump($hash[0]);
-exit;
-$parser="aa";
-$c = $parser ?:333;
-var_dump($c);exit;
-
 $arr = [[1], [2], [2], [4]];
 var_dump(add($arr));
 
