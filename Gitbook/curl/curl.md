@@ -4,8 +4,10 @@ GET HEAD POST PUT 请求
  
 只要输出结果，不加任何参数， GET 请求。 示例：获取出口 ip 信息
  
+```
 curl http://ipinfo.io/
- 
+```
+```
 {
   "ip": "58.247.111.158",
   "hostname": "No Hostname",
@@ -15,10 +17,13 @@ curl http://ipinfo.io/
   "loc": "31.0456,121.3997",
   "org": "AS17621 China Unicom Shanghai network"
 }
+```
 发送 HEAD 请求，获取 response header 信息 示例：
  
+```
 curl -I http://voice.hupu.com
- 
+```
+``` 
 HTTP/1.1 302 Found
 Server: nginx/1.4.2
 Date: Sat, 28 Nov 2015 07:26:18 GMT
@@ -28,6 +33,8 @@ X-Powered-By: PHP/5.4.41
 Location: http://voice.hupu.com/hot
 X-Cache: BYPASS
 X-Server: zhangwuji-lb-5-247-prd.jh.hupu.com
+```
+
 发送 HEAD 请求，并跟踪返回的 Location， -L 示例:
  
 curl -I http://voice.hupu.com -L

@@ -2,28 +2,16 @@ decoupled(解耦)
 
 >design patterns are primarily based on the following principles of object orientated design.
 Program to an interface not an implementation
+用接口而不是实现
 Favor object composition over inheritance
+用组合而不是继承
 
 
-###Creational Patterns
+
+###Creational Patterns创建型模式
 >These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.
 This gives program more flexibility in deciding which objects need to be created for a given use case.
 >>Factory pattern | Singleton(单例) pattern |  Prototype(原型) pattern
-
-
-
-###Structural Patterns
->These design patterns concern class and object composition.
-Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.
->>Adapter(适配器) pattern | Bridge(桥接) pattern | Filter(过滤器) pattern | Facade(外观) pattern | Flyweight(享元) pattern | Proxy(代理) pattern
-
-###Behavioral Patterns
->These design patterns are specifically concerned with communication between objects.
->>chainOfResponsibility(责任链) pattern | Command(命令) pattern | Interpreter(解释器) pattern |Mediator(中介者) pattern | Memento(备忘录) Pattern
-| Observer(观察者) pattern | Null Object(空对象) pattern |Strategy(策略) pattern |Template(模板) pattern | Visitor(访问者) Pattern | MVC Pattern
-
-####创建型模式
-
 >工厂模式 创建你需要的对象的类 后期更改 只需要更改工厂类中的代码
 >
 >单例模式 保证在整个请求的声明周期内只有一个实例存在,应用场景是，当我们有一个全局的对象（比如配置类）或一个共享的资源（比如事件队列）时。
@@ -31,9 +19,10 @@ Concept of inheritance is used to compose interfaces and define ways to compose 
 >原型模式 通过复制已经存在的实例，而不是新建实例
 
 
-
-####结构型模式
-
+###Structural Patterns结构型模式
+>These design patterns concern class and object composition.
+Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.
+>>Adapter(适配器) pattern | Bridge(桥接) pattern | Filter(过滤器) pattern | Facade(外观) pattern | Flyweight(享元) pattern | Proxy(代理) pattern
 >适配器模式  通过适配器让不兼容的类一起工作
 >
 >桥接模式  把对象的行为，特征分离开 各自可以独立变化
@@ -47,7 +36,10 @@ Concept of inheritance is used to compose interfaces and define ways to compose 
 >代理模式  代理类作为其他类的接口提供服务
 
 
-###行为型模式
+###Behavioral Patterns行为型模式
+>These design patterns are specifically concerned with communication between objects.
+>>chainOfResponsibility(责任链) pattern | Command(命令) pattern | Interpreter(解释器) pattern |Mediator(中介者) pattern | Memento(备忘录) Pattern
+| Observer(观察者) pattern | Null Object(空对象) pattern |Strategy(策略) pattern |Template(模板) pattern | Visitor(访问者) Pattern | MVC Pattern
 >责任链模式 解耦一个请求中的发送和接收，每个接收对象含有下一个接受对象,处理的命令对象传递给该链中的下一个处理对象
 >
 >命令模式 把对象包装起来传给执行的对象像命令一样的执行，命令对象可以把行动(action) 及其参数封装起来，于是这些行动可以被重复多次,取消（如果该对象有实现的话),取消后又再重做

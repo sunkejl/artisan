@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * 适配器
  * Adapter pattern works as a bridge between two incompatible(不兼容) interfaces
  */
 interface AdvancedMediaPlayer
