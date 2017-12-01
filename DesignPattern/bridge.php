@@ -4,6 +4,7 @@
  * Bridge is used when we need to decouple an abstraction(抽象) from its implementation(实现) so that the two can vary independently(独立).
  * this pattern decouples implementation class and abstract class by providing a bridge structure between them.
  * 桥接  把对象的行为，特征分离开 各自可以独立变化
+ * 通过桥去选择对应的类
  */
 interface DrawAPI
 {

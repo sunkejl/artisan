@@ -2,6 +2,7 @@
 
 /**
  * 适配器
+ * 传不同参数给适配器，去获得不同的实现
  * Adapter pattern works as a bridge between two incompatible(不兼容) interfaces
  */
 interface AdvancedMediaPlayer

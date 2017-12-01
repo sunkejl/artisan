@@ -8,6 +8,18 @@
  * 其次，如果创建对象的过程很复杂，你也只需要在工厂类中写，而不是在每个创建实例的地方重复地写。
  * 定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。工厂方法让类的实例化推迟到子类中进行。
  *
+ * 工厂方法模式 factory method pattern
+ *
+ * 定义一个创建对象的接口 但由子类决定要实例化的类是哪个，把类的实例化推迟到子类 新需求时主类（创建者）就不需要变化
+ * 通过让子类决定创建该创建的的对象是什么，来达到将该对象创建的过程封装的目的
+ * 创建对象的代码集中在一个对象和方法里 避免代码重复 实例化时只依赖接口，而不是具体的类 针对接口编程 不是针对实现编程
+ * 把创建对象的代码围起来
+ *
+ *
+ * 多态（OOP不是简单的吧函数和数据简单的结合起来，而是用类和继承来描述）
+ * 多态和基类的使用是oop的核心，但有一些情况需要创建基类的子类的一个具体实例 通过工厂模式来实现
+ * 一个工厂模式拥有一个静态方法 用来接受输入 并根据输入觉得该创建哪个子类的实例
+ * 比策略模式多了一层封装
  */
 
 namespace Dp\factory;
@@ -42,7 +54,7 @@ $obj = AutomobileFactory::create('Bugatti', 'V');
 
 print_r($obj->getMakeAndModel()); // outputs "Bugatti V"
 
-/**       */
+
 interface Shape
 {
     function draw();
@@ -69,10 +81,10 @@ class ShapeFactory
     function getShape($shapeType)
     {
         switch ($shapeType) {
-            case "1":
+            case "square":
                 return new Square();
                 break;
-            case "2";
+            case "circle";
                 return new Circle();
                 break;
 
@@ -84,23 +96,6 @@ $sharpFactory = new ShapeFactory();
 $square = $sharpFactory->getShape("square")->draw();
 
 
-//工厂方法模式 factory method pattern
-//
-//定义一个创建对象的接口 但由子类决定要实例化的类是哪个，把类的实例化推迟到子类 新需求时主类（创建者）就不需要变化
-//通过让子类决定创建该创建的的对象是什么，来达到将该对象创建的过程封装的目的
-//创建对象的代码集中在一个对象和方法里 避免代码重复 实例化时只依赖接口，而不是具体的类 针对接口编程 不是针对实现编程
-//把创建对象的代码围起来
-
-/**
- * 多态（OOP不是简单的吧函数和数据简单的结合起来，而是用类和继承来描述）
- * 多态和基类的使用是oop的核心，但有一些情况需要创建基类的子类的一个具体实例 通过工厂模式来实现
- * 一个工厂模式拥有一个静态方法 用来接受输入 并根据输入觉得该创建哪个子类的实例
- * 比策略模式多了一层封装
- * Created by PhpStorm.
- * User: sk
- * Date: 2016/8/5
- * Time: 1:20
- */
 class User
 {
     private $name;
