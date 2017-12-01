@@ -1,3 +1,4 @@
+http://fabien.potencier.org/what-is-dependency-injection.html
 依赖注入可能是最简单的设计模式，也许平时都已经再用了，但是它可能是最难解释的.
 可能是由于很多介绍它的例子没有意义，下面用php来解释
 
