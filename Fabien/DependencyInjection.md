@@ -175,5 +175,14 @@ setter注入
 
 大部分框架使用一览注入提供高内聚(cohesive)，低耦合(decoupled)的组件
 
+类写好 不要在类里改动 通过实例化的参数去配置
+
+如class AppKernel extends Kernel
+Kernel中 boot()
+        // init container
+         $this->initializeContainer();
+         
+         类的配置信息读取symfony\app\config\config_dev.yml
+
 
 http://fabien.potencier.org/what-is-dependency-injection.html

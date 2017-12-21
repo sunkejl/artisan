@@ -4,7 +4,7 @@ This article is part of a series of articles that explains how to create a frame
 
 Symfony2 is a reusable\(可重复使用\) set of standalone\(独立\), decoupled\(解耦\), and cohesive\(粘性\) PHP components that solve common\(共同\) web development problems.
 
-symfony 是一个 独立 解耦 组件 用来解决网页开发的共同问题
+是一个 独立 解耦 组件 用来解决网页开发的共同问题
 
 Instead of using these low-level components, you can use the ready-to-be-used Symfony2 full-stack\(堆栈\) web framework, which is based on these components... or you can create your very own framework. This series is about the latter.
 
@@ -56,15 +56,23 @@ Many modern web frameworks call themselves MVC frameworks. We won't talk about M
 
 When creating a framework, following the MVC pattern is not the right goal. The main goal should be the Separation of Concerns; I actually think that this is the only design pattern that you should really care about. The fundamental principles of the Symfony2 Components are centered around the HTTP specification. As such, the frameworks that we are going to create should be more accurately labelled as HTTP frameworks or Request/Response frameworks.
 
-设计模式才是真正关心的  基本原则 是围绕http说明    创建的框架就是一个http 请求的响应的框架
+设计模式才是真正关心的  基本原则 是围绕http说明    
+创建的框架就是一个http 请求的响应的框架
 
 Before we start  
-Reading about how to create a framework is not enough. You will have to follow along and actually type all the examples we will work on. For that, you need a recent version of PHP \(5.3.8 or later is good enough\), a web server \(like Apache or NGinx\), a good knowledge of PHP and an understanding of Object Oriented programming.
+Reading about how to create a framework is not enough. 
+You will have to follow along and actually type all the examples we will work on. For that, 
+you need a recent version of PHP \(5.3.8 or later is good enough\), a web server \(like Apache or NGinx\), 
+a good knowledge of PHP and an understanding of Object Oriented programming.
+有面向对象编程的知识
 
 Ready to go? Let's start.
 
 Bootstrapping  
-Before we can even think of creating our first framework, we need to talk about some conventions: where we will store our code, how we will name our classes, how we will reference external dependencies, etc.
+Before we can even think of creating our first framework, 
+we need to talk about some conventions: where we will store our code, how we will name our classes, 
+how we will reference external dependencies, etc.
+怎么命名文件和类，怎么解决依赖关系
 
 To store our framework, create a directory somewhere on your machine:
 
@@ -74,7 +82,9 @@ $ cd framework
 ```
 
 Coding Standards  
-Before anyone starts a flame war about coding standards and why the one used here suck hard, let's all admit that this does not matter that much as long as you are consistent. For this book, we are going to use the Symfony2 Coding Standards.
+Before anyone starts a flame war about coding standards and why the one used here suck hard,
+let's all admit that this does not matter that much as long as you are consistent. For this book, we are going to use the Symfony2 Coding Standards.
+编码规范
 
 Components Installation  
 To install the Symfony2 Components that we need for our framework, we are going to use Composer, a project dependency manager for PHP. First, list your dependencies in a composer.json file:
@@ -101,14 +111,20 @@ $ php composer.phar install
 
 After running the install command, you must see a new vendor directory that must contain the Symfony2 ClassLoader code.
 
-Even if we highly recommend you the use of Composer, you can also download the archives of the components directly or use Git submodules. That's really up to you.
+Even if we highly recommend you the use of Composer, 
+you can also download the archives of the components directly or use Git submodules. That's really up to you.
 
 Naming Conventions and Autoloading  
-We are going to autoload all our classes. Without autoloading, you need to require the file where a class is defined before being able to use it. But with some conventions, we can just let PHP do the hard work for us.
+We are going to autoload all our classes. 
+Without autoloading, you need to require the file where a class is defined before being able to use it.
+But with some conventions, we can just let PHP do the hard work for us.
+根据约定,让php自动加载
 
 没有autoloading 在类定义前 我们需要require这个文件   有了autoloading 我们可以让php 替我们自动加载
 
-Symfony2 follows the de-facto PHP standard, PSR-0, for class names and autoloading. The Symfony2 ClassLoader Component provides an autoloader that implements this PSR-0 standard and most of the time, the Symfony2 ClassLoader is all you need to autoload all your project classes.
+Symfony2 follows the de-facto PHP standard, PSR-0, for class names and autoloading. 
+The Symfony2 ClassLoader Component provides an autoloader that implements this PSR-0 standard and most of the time, 
+the Symfony2 ClassLoader is all you need to autoload all your project classes.
 
 Create and empty autoloader in a new autoload.php file:
 
@@ -133,7 +149,8 @@ $ php autoload.php
 
 The Symfony website has more information about the ClassLoader component.
 
-Composer automatically creates an autoloader for all your installed dependencies; instead of using the ClassLoader component, you can also just require vendor/.composer/autoload.php.
+Composer automatically creates an autoloader for all your installed dependencies; 
+instead of using the ClassLoader component, you can also just require vendor/.composer/autoload.php.
 
 composer 自动创建了自动加载   我们只需 require vendor/.composer/autoload.php
 

@@ -1,13 +1,39 @@
 <?php
+$a="";
+$b=321;
+$a=$a?:$b;
+var_dump($a);exit;
+$c = [1, 2, 3];
+$d = [5, 6, 7];
+foreach ($c as $k => $v) {
+    foreach ($d as $kd => $vd) {
+        if ($vd == 6) {
+            break;
+        }
+        echo $vd;
+    }
+    echo $v;
+    break;
+}
+exit;
+$arr = [12, 13, 14];
+$c = array_flip($arr);
+var_dump($arr);
+unset($c['12']);
+$arr = array_flip($c);
+var_dump($arr);
+var_dump($c);
+exit;
 function c()
 {
     static $c;
-    if(!isset($c)){
+    if (!isset($c)) {
         echo "dd";
-        $c=2;
+        $c = 2;
     }
     return $c;
 }
+
 var_dump(c());
 var_dump(c());
 var_dump(c());

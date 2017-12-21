@@ -134,5 +134,7 @@ class Container
 依赖注入容器管理对象，从它们的初始化到配置，这些对象不知道他们被容器管理，
 当然，手动创建维护容器更快,可继承的容器更有用
 
+Pimple 容器
+https://github.com/fabpot/Pimple
 
 http://fabien.potencier.org/do-you-need-a-dependency-injection-container.html

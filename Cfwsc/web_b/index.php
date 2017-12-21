@@ -9,7 +9,7 @@ ini_set('display_errors',true);
 error_reporting(E_ALL);
 // example.com/web/front.php
 
-require_once __DIR__ . '/../autoload.php';
+require_once __DIR__ . '/autoload.php';
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
