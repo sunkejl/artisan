@@ -1,5 +1,31 @@
-Before we start with today's topic, let's refactor our current framework just a little to make templates even more readable:
-
+Before we start with today's topic, 
+let's refactor our current framework just a little to make templates even more readable:
+在开始前，先重构下当前的框架
+```
+http://php.net/manual/zh/function.extract.php
+int extract ( array &$array [, int $flags = EXTR_OVERWRITE [, string $prefix = NULL ]] )
+ flags
+ 对待非法／数字和冲突的键名的方法将根据取出标记 flags 参数决定。可以是以下值之一：
+ 
+ EXTR_OVERWRITE
+ 如果有冲突，覆盖已有的变量。
+ EXTR_SKIP
+ 如果有冲突，不覆盖已有的变量。
+ EXTR_PREFIX_SAME
+ 如果有冲突，在变量名前加上前缀 prefix。
+ EXTR_PREFIX_ALL
+ 给所有变量名加上前缀 prefix。
+ EXTR_PREFIX_INVALID
+ 仅在非法／数字的变量名前加上前缀 prefix。
+ EXTR_IF_EXISTS
+ 仅在当前符号表中已有同名变量时，覆盖它们的值。其它的都不处理。 举个例子，以下情况非常有用：定义一些有效变量，然后从 $_REQUEST 中仅导入这些已定义的变量。
+ EXTR_PREFIX_IF_EXISTS
+ 仅在当前符号表中已有同名变量时，建立附加了前缀的变量名，其它的都不处理。
+ EXTR_REFS
+ 将变量作为引用提取。这有力地表明了导入的变量仍然引用了 array 参数的值。可以单独使用这个标志或者在 flags 中用 OR 与其它任何标志结合使用。
+ 如果没有指定 flags，则被假定为 EXTR_OVERWRITE。
+ extract($request->query->all(), EXTR_SKIP);
+```
 
 
 ```

@@ -15,7 +15,7 @@
 服务器 172.16.54.161
     cat /tmp/id_rsa.pub >> /root/.ssh/authorized_keys
     
-客户机
+客户机 直接登录
      ssh c
 
 

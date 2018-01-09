@@ -1,4 +1,7 @@
 <?php
+$sql = sprintf("INSERT INTO `shop_goods_order_global` (`orderid`, `globalinfo`, `ispay`,`issplit`,`valid`,`paytime`) VALUES ('%s', '%s', '%s', '%s','%s','%s')",
+    "123", "", "1", "0", "1", time());
+echo $sql;exit;
 $data=array("idcard"=>array(array("name"=>123,"id"=>22),array("name"=>333,"id"=>444)));
 $obj=json_decode(json_encode($data));
 var_dump(current($obj->idcard)->name);

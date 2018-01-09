@@ -15,3 +15,10 @@ https://www.tutorialspoint.com/symfony
 
 vendor\doctrine\dbal\lib\Doctrine\DBAL\Query\QueryBuilder.php
 sql 缩写
+
+C
+http://c-faq.com/~scs/cclass/notes/top.html
+http://c-faq.com/~scs/cclass/notes/sx6d.html
+
+扩展
+http://www.bo56.com/page/2/?s=PHP7%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91

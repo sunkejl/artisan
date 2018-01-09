@@ -2,7 +2,7 @@
 
 
 2 改curl配置 指向fiddle代理，通过fiddle抓包
-curl_setopt($ch,CURLOPT_PROXY,"172.16.54.114");
+curl_setopt($ch,CURLOPT_PROXY,"172.16.54.248");
 curl_setopt($ch,CURLOPT_PROXYPORT,8888);
 
 3 服务器（或mac）直接绑定有fiddle的PC的ip

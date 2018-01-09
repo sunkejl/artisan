@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * 前端控制器模式
+ * a controller that handles all requests for a website
+ **/
 namespace Dp\frontController;
 
 class HomeView
