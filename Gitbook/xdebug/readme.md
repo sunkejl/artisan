@@ -1,3 +1,8 @@
+命令行执行xdebug
+
+https://segmentfault.com/n/1330000010550625?token=c94eb35d61893de957a2e203a57cef69
+
+
 ```php
 [Xdebug]
 zend_extension="/usr/local/webserver/php5.2.17/lib/php/extensions/no-debug-non-zts-20060613/xdebug.so"  

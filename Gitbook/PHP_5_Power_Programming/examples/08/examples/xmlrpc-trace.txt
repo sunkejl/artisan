@@ -1,0 +1,34 @@
+POST /fasttrack/chapter_14/xmlrpc_example.php HTTP/1.0
+User-Agent: PHP XMLRPC 1.0
+Host: localhost
+Content-Type: text/xml
+Content-Length: 164
+
+<?xml version="1.0"?>
+<methodCall>
+<methodName>hello</methodName>
+<params>
+<param>
+<value><string>Derick</string></value>
+</param>
+</params>
+</methodCall>
+
+
+
+HTTP/1.1 200 OK
+Date: Tue, 24 Dec 2002 18:52:25 GMT
+Server: Apache/1.3.27 (Unix) PHP/4.3.0RC4
+X-Powered-By: PHP/4.3.0RC4
+Connection: close
+Content-Type: text/xml
+Content-length: 135
+
+<?xml version="1.0"?>
+<methodResponse>
+<params>
+<param>
+<value><string>Hi Derick!</string></value>
+</param>
+</params>
+</methodResponse>

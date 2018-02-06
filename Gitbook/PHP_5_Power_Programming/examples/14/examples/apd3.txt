@@ -1,0 +1,26 @@
+$ pprofp -T /var/tmp/apd/pprof.PID 
+main
+define
+require_once
+require_once
+  require_once
+    define
+    define
+    define
+    define
+    define
+    define
+    function_exists
+    zend_version
+    version_compare
+    define
+    substr
+    define
+    define
+    define
+    ini_set
+    register_shutdown_function
+  define (x49)
+require_once
+  define (x21)
+  ...

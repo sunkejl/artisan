@@ -6,6 +6,8 @@ Node.js 升级
 
 npm install gitbook-cli -g
  
+gitbook init
+ 
 gitbook build /opt/www/erp-doc/markdown/replace_system /opt/www/erp-doc/replace_system/
 
 

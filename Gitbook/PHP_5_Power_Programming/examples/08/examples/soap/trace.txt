@@ -1,0 +1,43 @@
+POST /fasttrack/chapter_14/soap/server.php HTTP/1.0
+User-Agent: PEAR-SOAP 0.7.1
+Host: kossu
+Content-Type: text/xml; charset=UTF-8
+Content-Length: 507
+SOAPAction: ""
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="urn:Example"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+
+<ns4:hello>
+<arg xsi:type="xsd:string">Derick</arg></ns4:hello>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+HTTP/1.1 200 OK
+Date: Tue, 31 Dec 2002 11:41:26 GMT
+Server: Apache/1.3.27 (Unix) PHP/4.4.0-dev
+X-Powered-By: PHP/4.4.0-dev
+Content-Length: 533
+Connection: close
+Content-Type: text/xml; charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="urn:Example"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+
+<ns4:helloResponse>
+<return xsi:type="xsd:string">Hi Derick!</return></ns4:helloResponse>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

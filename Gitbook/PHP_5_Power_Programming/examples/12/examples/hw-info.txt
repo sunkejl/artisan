@@ -1,0 +1,15 @@
+ABOUT HELLOWORLD-1.0
+====================
++-----------------+--------------------------------------------------+
+| Package         | HelloWorld                                       |
+| Summary         | Simple Hello World Package                       |
+| Description     | This package contains a class that simply prints |
+|                 | "Hello, World!".                                 |
+| Maintainers     | Stig S. Bakken <stig@php.net> (lead)             |
+| Version         | 1.0                                              |
+| Release Date    | 2003-02-24                                       |
+| Release License | PHP License                                      |
+| Release State   | stable                                           |
+| Release Notes   | First production release.                        |
+| Provides        | Array                                            |
++-----------------+--------------------------------------------------+

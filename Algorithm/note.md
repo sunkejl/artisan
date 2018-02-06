@@ -4,9 +4,11 @@ Correctness − Data structure implementation should implement its interface cor
 正确性
 
 Time Complexity(复杂度) − Running time or the execution time of operations of data structure must be as small as possible.
+运行时间或执行时间 越小越好
 时间复杂度
 
 Space Complexity − Memory usage of a data structure operation should be as little as possible.
+运行时的内存 越小越好
 空间复杂度
 
 * Worst Case
@@ -55,11 +57,11 @@ File − File is a collection of records of the entities in a given entity set.
 |θ | Notation  | Theta | |
 
 ####common asymptotic notations 常用符号发言
-* constant	−	Ο(1)
-* logarithmic	−	Ο(logn)
-* linear	−	Ο(n)
-* n log n	−	Ο(nlogn)
-* quadratic	−	Ο(n2)
+* constant	−	Ο(1) 常数
+* logarithmic	−	Ο(logn) 指数
+* linear	−	Ο(n)  线性
+* n log n	−	Ο(nlogn) 
+* quadratic	−	Ο(n2) 幂
 * cubic	−	Ο(n3)
 * polynomial(多项式)	−	nΟ1
 * exponential(指数)	−	2Οn
@@ -69,9 +71,11 @@ File − File is a collection of records of the entities in a given entity set.
 Divide/Break
 breaking the problem into smaller sub-problems.
 takes a recursive approach to divide the problem until no sub-problem is further divisible. 
+递归的把问题变成更小,直到无法进一步分割
 
 Conquer/Solve
 receives a lot of smaller sub-problems to be solved. 
+
 
 Merge/Combine
 this stage recursively combines them until they formulate a solution of the original problem. 

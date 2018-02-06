@@ -1,0 +1,6 @@
+CONTENTS OF HELLOWORLD-1.0.TGZ
+==============================
++----------------+--------------------------------+
+| PACKAGE FILE   | INSTALL PATH                   |
+| HelloWorld.php | /usr/share/pear/HelloWorld.php |
++----------------+--------------------------------+

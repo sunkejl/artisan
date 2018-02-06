@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf>
+<channel about="http://www.php.net/">
+	<title>PHP: Hypertext Preprocessor</title>
+	<link>http://www.php.net/</link>
+	<description>The PHP scripting language web site</description>
+	<items>
+		<Seq>
+			<li resource="http://qa.php.net/" />
+			<li resource="http://www.php.net/downloads.php" />
+		</Seq>
+	</items>
+</channel>
+<!-- RSS-Items -->
+
+<item about="http://qa.php.net/">
+	<title>PHP 4.3.5RC1 released!</title>
+	<link>http://qa.php.net/</link>
+	<description>PHP 4.3.5RC1 has been released for testing. This is the first release candidate and should have a very low number of problems and/or bugs. Nevertheless, please download and test it as much as possible on real-life applications to uncover any remaining issues. List of changes can be found in the NEWS file.</description>
+</item>
+
+<item about="http://www.php.net/downloads.php">
+	<title>PHP 5.0 Beta 3 released!</title>
+	<link>http://www.php.net/downloads.php</link>
+	<description>PHP 5.0 Beta 3 has been released. The third beta of PHP is also scheduled to be the last one (barring unexpected surprises). This beta incorporates dozens of bug fixes since Beta 2, better XML support and many other improvements, some of which are documented in the ChangeLog. Some of the key features of PHP 5 include: PHP 5 features the Zend Engine 2. XML support has been completely redone in PHP 5, all extensions are now focused around the excellent libxml2 library (http://www.xmlsoft.org/). SQLite has been bundled with PHP. For more information on SQLite, please visit their website. A new SimpleXML extension for easily accessing and manipulating XML as PHP objects. It can also interface with the DOM extension and vice-versa. Streams have been greatly improved, including the ability to access low-level socket operations on streams.</description>
+</item>
+<!-- / RSS-Items PHP/RSS -->
+</rdf>

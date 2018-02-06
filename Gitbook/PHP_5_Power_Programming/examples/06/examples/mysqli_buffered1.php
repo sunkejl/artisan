@@ -1,0 +1,32 @@
+<?php
+
+$conn = mysqli_connect("localhost", "test", "", "world");
+$result = $conn->query("SELECT Name, Population FROM Country".
+                       " WHERE Population < 100000 ORDER BY Population DESC");
+if (empty($result)) {
+    die("query failed: $conn->error\n");
+}
+
+print "The $result->num_rows least populated areas in the world:<br>\n";
+$halfway = (int)ceil($result->num_rows / 2.0);
+print "<table>\n";
+for ($i = 0; $i < $halfway; $i++) {
+    print "\n<tr>";
+    $result->data_seek($i);
+    $row = $result->fetch_row();
+    print "<td align=left>$row[0]</td>";
+    print "<td align=right>$row[1]</td>";
+    print "<td>&nbsp;</td>\n";
+    if ($i + $halfway < $result->num_rows) {
+        $result->data_seek($i + $halfway);
+        $row = $result->fetch_row();
+        print "<td align=left>$row[0]</td>";
+        print "<td align=right>$row[1]</td>";
+    } else {
+        print "<td colspan=2>&nbsp;</td>";
+    }
+    print "</tr>\n";
+}
+print "</table>\n";
+$result->free();
+$conn->close();
