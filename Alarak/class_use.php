@@ -1,5 +1,4 @@
 <?php
-
 class MySpace
 {
     public $name;
