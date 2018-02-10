@@ -1,13 +1,36 @@
 <?php
 
-abstract class A
+interface I
 {
-    abstract function getA();
+    const A = 1;
+
+    function d();
 }
 
-class B extends A
+abstract class A implements I
 {
-    function getA()
+    abstract function getA();
+
+    function c()
     {
+        echo 123;
     }
 }
+
+class B extends A implements I
+{
+    function d()
+    {
+    }
+
+    function getA()
+    {
+        parent::c();
+    }
+}
+
+$b = new B();
+$b->getA();
+var_dump(I::A);
+var_dump(B::A);
+var_dump(intval("a--1"));

@@ -1,3 +1,0 @@
-# My Awesome Book
-
-todo
