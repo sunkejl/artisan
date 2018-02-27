@@ -18,3 +18,6 @@ https://www.tutorialspoint.com/c_standard_library/c_function_memcpy.htm
 
 C语言手册
 http://www.gnu.org/software/libc/manual/
+
+cs50
+https://reference.cs50.net/

@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2017/6/1
- * Time: 16:49
- */
 class xml
 {
     public function xmlToArray()
