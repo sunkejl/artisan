@@ -3,6 +3,7 @@
 /**
  * 原型模式
  * Prototype pattern refers to creating duplicate(重复) object while keeping performance in mind.
+ * 当需要创造出重复的对象，php 对象=是引用，clone是值传递
  * create a clone of the current object
  */
 class Student

@@ -29,3 +29,10 @@ http://www.bo56.com/page/2/?s=PHP7%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91
 
 php
 http://0x1.im/
+
+编码
+http://eux.baidu.com/blog/2017/07/web%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B9%B1%E7%A0%81
+
+
+正则
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions

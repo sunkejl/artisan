@@ -5,6 +5,7 @@
  * this pattern decouples implementation class and abstract class by providing a bridge structure between them.
  * 桥接  把对象的行为，特征分离开 各自可以独立变化
  * 通过桥去选择对应的类
+ * 通过依赖注入 把对应的对象进行传递
  */
 interface DrawAPI
 {

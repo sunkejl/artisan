@@ -41,6 +41,7 @@ class SellStock implements Order
     }
 }
 
+//股票
 class Stock
 {
     function buy()
@@ -54,6 +55,7 @@ class Stock
     }
 }
 
+//代理商
 class Broker
 {
     public $list = array();

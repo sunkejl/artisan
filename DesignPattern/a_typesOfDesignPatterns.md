@@ -31,7 +31,7 @@ Concept of inheritance is used to compose interfaces and define ways to compose 
 >
 >外观模式  对外提供统一的接口 把具体的实现隐藏起来
 >
->享元模式  减少对象的创建 把已创建的对象保存起来 供下次使用
+>享元模式  减少对象的创建 把已创建的对象保存起来 供下次使用 和容器有区别 容器创造的对象是不同的对象，享元模式创造的对象是共享的对象
 >
 >代理模式  代理类作为其他类的接口提供服务
 

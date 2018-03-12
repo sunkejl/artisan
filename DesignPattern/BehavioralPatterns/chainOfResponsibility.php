@@ -7,6 +7,8 @@
  * This pattern decouples sender and receiver of a request based on type of request.
  * normally each receiver contains reference to another receiver.
  * If one object cannot handle the request then it passes the same to the next receiver and so on.
+ * 如果一个对象不能处理这个请求，就把它传递给下一个接收者
+ * 通过依赖关系，在每个类实例化时，给它绑定下一级的对象，调用时，判断有没有下一级对象来处理
  */
 abstract class AbstractLogger
 {
