@@ -1,5 +1,7 @@
 命令行执行xdebug
 
+需要在phpstorm 命令行执行
+
 https://segmentfault.com/n/1330000010550625?token=c94eb35d61893de957a2e203a57cef69
 
 
