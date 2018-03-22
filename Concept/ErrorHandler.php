@@ -1,10 +1,6 @@
 <?php
 /**
  * 发生错误时控制错误输出 重定向只能没有任何输出前有效
- * Created by PhpStorm.
- * User: sk
- * Date: 2016/8/5
- * Time: 15:55
  */
 function myErrorHandler($errorNumber, $errorStr, $errorFile, $errorLine)
 {

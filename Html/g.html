@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type='text/javascript' src='http://adminlocal.boqii.com/js/jquery.js'></script>
+    <style>
+        div {
+            overflow: hidden;
+        }
+
+        .child {
+            border: 1px solid black !important;
+            display: flex;
+            width: 20%;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .col {
+            flex: 1;
+            text-align: center;
+        }
+
+        .row {
+            margin: 20px auto;
+        }
+
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            height: calc(250px);
+            width: calc(100%);
+        }
+
+        .text-red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="child" id="ueq-auto">
+        <div class="col">
+            <div class="row">
+                <img src="data:image/png;base64,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"
+                     alt="">
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <span><b>系统推单-UEQ</b></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row text-red"><span>待复核(11)</span></div>
+        </div>
+    </div>
+    <div class="child" id="y-auto">
+        <div class="col">
+            <div class="row">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAAmCAYAAADQriVKAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAEXRFWHRTb2Z0d2FyZQBTbmlwYXN0ZV0Xzt0AAAHVSURBVGiB7ZpRkgMhCERNao/k/U/gnSZfU2sZGRBbIZTvMzERbaXRmdd1XVc6uOBtHcDhnyOGI/6sA1hFzvnrs1KKQSRyIGL0Br4K9IQiYkfFdNKUI44YjgjhGdJU07bz5iFLxEANcqcX3UhiXxXXSVOOWLIzLFY0CsvYQ3hGm1qoCfXmES0nTTkinIE//SbnzMZ2DHwjOWe3nhbKwEf6pXaJpVBhdsboJHo08xBieE07o4QobVtKKeQVOmfilgYOEaMegPVzBES1ZAV0Z1ilC2onaAhxAufqezS9Fe551UuYFiOKeXpgqpryJMSv74qUUnpp3pvyIAI1+b1qiSsq7u+tBYWXtpobVOlkcdzt6vbcBNdtJXdX9W/Q4qnSFGWeKCF20eubi6cVD4naM+oJHbnjkawm1IrTnjmo2DXijTBl4NRukAqhHQjygk+Sxri0hBIEejf1FJT2adyONNb2SYm9+iwFEYMLdPVjUcQVzN3esqJSV1PSlfBLz6dHYl2xY1ViaIQYqVJ2MNtfLQhqIakOfSnJ/UEy6NGV9jR46aFPy8odrBYjJdnrkkjRqD4keHrbnAJi4L0Sl/tOUsEgmf3/HZ42tTNG4a4bRiqyiGwV4/DMB3mPHgYYPJMGAAAAAElFTkSuQmCC"
+                     alt="">
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <span><b>系统推单-易想</b></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row text-red"><span>待复核(11)</span></div>
+        </div>
+    </div>
+    <div class="child" id="ueq-manual">
+        <div class="col">
+            <div class="row">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADFElEQVR4Xu1b7VUVQQxNKtAOhA7oQK3AbAViBWAFYAViBWAFm1cBWIFYAdCBVBDP9cw77Hvg28nu7O6cZ+YPP8h85OZjbrLzmDKHiLwjoo9EdMTMR5hmZjdEdEtE31T1PnMpl5iIHBDRByJ67ZrYL7xS1VvulyMSkUtmPt4la2afVPUqZ71cGREB0NfMXFr5v0cws6YXgBzl1wphQVXVXAX75ETkipnhdZMMM9vtAXB7Zr7O3d3MfhPRoari7+jRNA1C7O3ohXYssNMDmqaBNRF/2aNkKNQAgGVr/iS4attWBsx7NmVRAJCAmPmnVxEzu1fVQ++8l+SXBsAV/10F2rbtTa45AAUASyZB7w0QHtBBYC9CAPo0TTPkFvjRti1o8+ixaA5IAIDfv/FoYmbfVXUnbc5db3EAhlDRvSJCAxLho5kd7A0V9oZBSfdPey9bC+AQDi8oav1qAEgg9JalpUvhqgBIIFww88kLGRyWPy7ZB1jvsfgtsK1s6tCcMjPaVOuW2NVU7bDqAMi9v0vJLQpAakaeERGsDUL05V+WTg1ThAd6d8jcaJKO7gotBoCIQHG4+kYz0syQDNXMHpj5FcBB/DPzBvVFT4CIPo/NC7MDkGK8Xcf4WFc2M7TU0C0e5A2zAiAiJ8x8MVbp7fmpUYpuMULDNWYDwNP6dmnQER5SIwypRZzn+8Uighi+dE50iydPeI+vMbmTHSw0d8kNORgFANyVivm+UwypFdJtVKS83jrfDcKySPOyT/Ga/x8A1GydOc4WHjAHyjXvER5Qs3XmOFt4wBwo17zHMw8ANSais9LscGiJLCJfiQh0veg7oXWlugEAaCcz301lMe8TGhFBTwIATDJAzbcBGPwmIPeEZoaCKKs0nrochkH+awBgtACg67pT19/Yq6YQCA+IEIgcEEkwboG4BToIxDXofB6fS3+7csEDKqoFgggFEQoiFEQoiFAQoSBCTwgEEwwm6Pul6B5Q4cdZvwsQketF+ezfBWDR9Gjq3PtTmQxveDCzU8/jSRHB16Dz9Mt1PMwsOVZ45PkH1J1J+Z427VQAAAAASUVORK5CYII="
+                     alt="">
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <span><b>线下推单-UEQ</b></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row text-red"><span>待复核(11)</span></div>
+        </div>
+    </div>
+    <div class="child" id="y-manual">
+        <div class="col">
+            <div class="row">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEWklEQVR4Xu2bj5ENQRDG+yJABIiAiwARcBEgAkTARYAIuAgQASJABIgAEVC/V9uqb97MTvfuvt19W9NVV857u7PTX3/9d/ZOpCx3RORuz/fH/NUHEfmKAicFLd6JyINj1tCx9/cicpYDAKt/dCywhUtOcwC8EJHnnXafReTTFjQ1OmBg3Bs5rwFwLiIAsiWxBm4ANAZkuH2JIs0FWgxoQbBlgS3lwC6maZ2TTYO3RYQyEaEc3tXMG5JqHbAhXbOqNABMqZ91gcaABRC42jUoxJwbIsL/+fnR/dCQ0cP/nmBvq3IBlHwSqDZf0cGNBGI1ANCWMngBhIjAgmci8jZyk7l2FQA8EpE3iQLfutkDaVdTL+CQlrn+VnI9IMCIqCwOQKr8n84FasrAGKx+3Wj8eAATigDolMSLKNOiqBDgvhjaY3UCH8HOIzCCIs3u9TRYrO0BAMWYAQ7xxXvBh/McnTRjeQCJRnb2SVZQl+B39uGVPQCeishL790j/DAdtp6Zkjv6eID7bm4CAO/scg8AFsP/hjAA8Lz05RmkPIScPnbsTjx42K130QVKD5CLBUEsBthIxGIlpXBd4gmCG13zaO/pBp3rhC/7a+5gs1Hfzz0Q9mlWuOlk4yIMsP5P8Iu6Wwlt/F4zgpdViwNA+pzqzPEoAcCapTPJqF9NBsD9ruSMbAD/83ZoUP6XWdzrr7X9sKa6kxfUPRfI1eW1B+v3kVxuA1bkvtJeSKM0U0gkriwGgK0DaHYoYceIPcIfVQdAIYISeTUiWDTSkqbV25iD17SqjPQDi2QBBdaygM8iG9c10oYqmlUWBQC2QX8tXiiGaGl1DF9jICyF+lpRDmmoFgUABVGC9HXFaAsAAFGqDnV0Ru9hiyhv8WOBXRyAEgh8rtMg/gUMLA1gaeOE5YkDQw5tVgEAyqZ9fY3++j1DFJQf2ktk22HmAdH6XIeT3nbYKogCtLLUIEMEFyKLeGcAvS4w10BEqQ/Yfb3Az6Srww3sHNAqMwSI7EgsDUoeq0T9kGFIbvBJGuNzGFWyqNYqxAIdgqRWhREeKcaAaIfmpR+bZwSeBjKqNwop7zqqHOvBWn5sJmEdSuxabJg9CDK1sVVmdBJcsiquAYB2QkxWIDX2gTArAFjeBjroDhNqVvJQWa+xCvEZoFBTlGQ2ANKNRRqWCABcm3a0rzsXya0zCwBp43NI5UtMKFWJswBgW1XSmtbuUctGr7cTotKBycEBmPIAJAoAQBMINTvkWHBwAGhsGLEh0VY1qnDNx3MHMAcHYMisfgrFbZ3AHmDBIACg0f/36JyHDVYBcj5FCkzw9vlTAsBa2kFqhZlWjb3vCdreYOhLCFMrNOV6VRe4dEHg/Z0pN3nItRoAtfcEGwOSIAggW5LmAs0FTJpvfzSVcW5bB9BQRCc2a48X9Co6/cq+LZ62smtXaMz+sn86mxswjHnIWu/d9Ql9LxXABMZX0fOCtSps90WPsjtV+gdWTUKweB7aNAAAAABJRU5ErkJggg=="
+                     alt="">
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <span><b>线下推单-易想</b></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row text-red"><span>待复核(11)</span></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        $('#ueq-auto').click(function () {
+            window.location.href = "&method=ueq1";
+        });
+        $('#ueq-manual').click(function () {
+            window.location.href = "&method=ueq2";
+        });
+        $('#y-auto').click(function () {
+            window.location.href = "&method=ueq3";
+        });
+        $('#y-manual').click(function () {
+            window.location.href = "&method=ueq4";
+        });
+    })
+</script>
+</html>

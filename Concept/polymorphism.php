@@ -4,10 +4,6 @@ namespace c;
 /**
  * 多态 polymorphism
  * OOP不是简单的吧函数和数据简单的结合起来，而是用类和继承来描述
- * Created by PhpStorm.
- * User: sk
- * Date: 2016/8/3
- * Time: 22:10
  */
 abstract class Animal
 {

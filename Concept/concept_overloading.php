@@ -2,10 +2,6 @@
 
 /**
  * 属性和方法的重载
- * Created by PhpStorm.
- * User: sk
- * Date: 2016/8/4
- * Time: 21:42
  */
 class MyData
 {

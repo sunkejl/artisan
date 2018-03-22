@@ -5,6 +5,7 @@
  */
 $location = ord("a");#获取ASCII的数字
 var_dump($location);
+exit;
 $foo = chr($location + 1);
 var_dump($foo);
 for ($i = 0; $i < 200; $i++) {

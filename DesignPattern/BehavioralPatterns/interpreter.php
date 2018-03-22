@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * 解释器模式
  * interpret(翻译)
  * 定义语言的语法，并由解释器来解释语言中的语句 常用于sql解析
  * Interpreter pattern provides a way to evaluate(估价) language grammar or expression.
@@ -70,6 +71,6 @@ class AndExpression implements Expression
 $robert = new TerminalExpression("Robert");
 $john = new TerminalExpression("John");
 $or = new OrExpression($robert, $john);
-var_dump($or->interpret("John"));
+var_dump($or->interpret("John"));//true
 $and = new AndExpression($robert, $john);
-var_dump($and->interpret("John"));
+var_dump($and->interpret("John"));//false

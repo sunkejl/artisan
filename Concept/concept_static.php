@@ -22,4 +22,3 @@ var_dump($obj1->uid);#2
 $obj2 = new foo();
 var_dump(foo::$id);#3
 var_dump($obj2->uid);#3
-?>

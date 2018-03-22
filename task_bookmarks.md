@@ -39,3 +39,6 @@ http://eux.baidu.com/blog/2017/07/web%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E8%A7%
 
 正则
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions
+
+airBnb javascript 规范
+https://github.com/airbnb/javascript

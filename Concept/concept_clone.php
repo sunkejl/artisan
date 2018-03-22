@@ -16,4 +16,3 @@ $o1=new foo;
 $o2=$o1;
 $o2->uid=3;
 var_dump($o1->uid);
-?>

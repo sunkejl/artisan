@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Xdebug helper</title>
+
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="options.css">
+
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="options.js"></script>
+	</head>
+
+	<body>
+		<div id="content">
+			<div id="heading">
+				<h1>Xdebug helper</h1>
+				<p>Easy debugging, profiling and tracing</p>
+			</div>
+
+			<h3>Introduction</h3>
+			<p class="contentTxt">
+				First install and configure <a target="_blank" class="txtlink" href="http://www.xdebug.org/docs/install">Xdebug</a>, then set your IDE key below. Now tell Xdebug to debug, profile or trace by clicking the little bug in the addressbar:
+			</p>
+			<p class="contentTxt">
+				<i class="material-icons color--gray">bug_report</i> Debugging, profiling &amp; tracing disabled<br />
+				<i class="material-icons color--green">bug_report</i> Debugging enabled<br />
+				<i class="material-icons color--blue">alarm</i> Profiling enabled<br />
+				<i class="material-icons color--deep-purple">find_in_page</i> Tracing enabled
+			</p>
+			<p class="hint">Use Ctrl+Shift+X (Cmd+Shift+X on Mac) to open the popup or Alt+Shift+X to toggle the debugging state.</p>
+
+			<h3>IDE key</h3>
+			<p class="note">Select your IDE to use the default sessionkey or choose other to use a custom key.</p>
+			<p>
+				<select id="ide">
+					<option value="XDEBUG_ECLIPSE">Eclipse</option>
+					<option value="netbeans-xdebug">Netbeans</option>
+					<option value="macgdbp">MacGDBp</option>
+					<option value="PHPSTORM">PhpStorm</option>
+					<option value="null">Other</option>
+				</select>
+				<span id="customkey"><input type="text" id="idekey" /> </span>
+				<button class="save-button">Save</button>
+			</p>
+
+			<h3>Trace Trigger Value</h3>
+			<p class="note">If your xdebug is configured with a unique trace trigger key,
+			set that value here.  This value is blank by default.</p>
+			<p>
+				<input type="text" id="tracetrigger" value="">
+				<button class="save-button">Save</button>
+			</p>
+
+			<h3>Profile Trigger Value</h3>
+			<p class="note">If your xdebug is configured with a unique profile trigger key,
+				set that value here.  This value is blank by default.</p>
+			<p>
+				<input type="text" id="profiletrigger" value="">
+				<button class="save-button">Save</button>
+			</p>
+
+			<h3>Disable Popup</h3>
+			<p class="note">
+				If checked, xdebug session will be enabled / disabled by left click on the
+				xdebug helper icon, xdebug helper's popup will be disabled.
+			</p>
+			<p>
+                <label>
+                    <input type="checkbox" id="disable-popup" value="1">
+                    <span>Disable Popup</span>
+                </label>
+                <span class="disable-popup-saved fade">Saved</span>
+			</p>
+
+			<footer id="footer">
+				<a href="https://github.com/mac-cain13/xdebug-helper-for-chrome" class="contribute" target="_blank">
+					Feel free to submit ideas, bugs and pull request to our <span>Github project</span>
+				</a>
+			</footer>
+		</div>
+	</body>
+</html>

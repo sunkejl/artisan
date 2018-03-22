@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sk
- * Date: 2016/8/5
- * Time: 21:42
- */
 #d$mysqli = mysqli_connect("localhost", "root", "", "test");
 $mysqli =new mysqli("localhost", "root", "", "test");
 #$result = $mysqli->query("select * from stu");

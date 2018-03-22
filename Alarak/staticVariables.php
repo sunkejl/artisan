@@ -12,3 +12,14 @@ function test()
 test();//0
 test();//1
 test();//2
+
+class A{
+    static $a =123;
+    static function t(){
+        return self::$a;
+    }
+}
+$a=new A();
+A::$a=456;
+var_dump(A::t());//456
+

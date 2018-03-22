@@ -2,10 +2,6 @@
 
 /**
  * 异常处理
- * Created by PhpStorm.
- * User: sk
- * Date: 2016/8/3
- * Time: 23:45
  */
 class ErrorPhoneException extends ErrorException
 {
