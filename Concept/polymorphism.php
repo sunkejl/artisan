@@ -1,4 +1,5 @@
 <?php
+
 namespace c;
 
 /**
@@ -28,13 +29,12 @@ class Dog extends Animal
 
 class Person
 {
+
+    function showSound(Animal $animal)
+    {
+        echo $animal->makeSound();
+    }
 }
 
-function showSound(Animal $animal)
-{
-    echo $animal->makeSound();
-}
-
-showSound(new Cat());
-showSound(new Dog());
-showSound(new Person());
+$p = new Person();
+$p->showSound(new Cat());

@@ -3,6 +3,8 @@
  * 策略模式
  * 对象的某个行为在不同的场景中，该行为有不同的实现。给对象的方法传递不同的对象来实现
  * In Strategy(策略) pattern, a class behavior or its algorithm can be changed at run time.
+ * 也可以传入俩个不同类型的类，来组织数据
+ * 把 一个 模块 所 依赖 的 某类 算法 委 交 其他 模块 实现。
  */
 
 namespace Dp\strategy;

@@ -1,4 +1,5 @@
 <?php
+//责任链实现中间件
 
 abstract class Verify
 {
