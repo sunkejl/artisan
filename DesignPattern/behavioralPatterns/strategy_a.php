@@ -36,6 +36,9 @@ class ArrayOutput implements OutputInterface
 
 class MyClient
 {
+    /**
+     * @var OutputInterface
+     */
     private $output;
 
     public function setOutput(OutputInterface $outputType)

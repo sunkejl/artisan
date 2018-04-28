@@ -1,4 +1,5 @@
 <?php
+//session 存储机制
 session_start();
 $_SESSION['name'] = serialize(["name" => 1, "age" => 2, "country" => 3]);
 var_dump($_COOKIE);

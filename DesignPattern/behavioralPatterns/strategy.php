@@ -22,7 +22,7 @@ class OperationAdd implements Strategy
     }
 }
 
-class OperationSubstract implements Strategy
+class OperationSubtract implements Strategy
 {
     function doOperation($num1, $num2)
     {
@@ -46,7 +46,7 @@ class Context
 }
 
 $r1 = (new Context(new OperationAdd()))->executeStrategy(1, 2);
-$r2 = (new Context(new OperationSubstract()))->executeStrategy(1, 3);
+$r2 = (new Context(new OperationSubtract()))->executeStrategy(1, 3);
 var_dump($r1);
 var_dump($r2);
 
