@@ -1,0 +1,1 @@
+https://docs.cs50.net/2017/fall/notes/0/lecture0.html#introduction
