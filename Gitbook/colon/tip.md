@@ -33,3 +33,4 @@ DRY是Don'tRepeatYourself，即尽量减少重复代码。
 UI/UE（User Interface/User Experience）
 
 L是Linux，A是Apache，M是MySQL，P是PHP
+
