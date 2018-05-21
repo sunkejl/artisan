@@ -42,3 +42,6 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expression
 
 airBnb javascript 规范
 https://github.com/airbnb/javascript
+
+101个设计模式
+https://sourcemaking.com/design-patterns-and-tips
