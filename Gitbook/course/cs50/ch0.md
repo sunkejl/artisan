@@ -99,32 +99,34 @@ then, can be represented by lots and lots of these pixels, or single squares of 
 For both ASCII and RGB, the maximum value that each character or amount of one color can be is 255
 because one common standard group of bits is a byte, or 8 bits.
 
-In computer science, a common theme is abstraction, where we start by taking ideas to solve simple problems, and layering these solutions until we can build more and more interesting applications.
+In computer science, a common theme is abstraction, where we start by taking ideas to solve simple problems
+and layering these solutions until we can build more and more interesting applications.
 
 Algorithms
-Now that we know how to represent inputs and outputs, we can work on algorithms, which is just step-by-step instructions on how to solve a problem.
+Now that we know how to represent inputs and outputs, we can work on algorithms,
+which is just step-by-step instructions on how to solve a problem.
 
 Computational thinking is the idea of having these precise instructions.
 
-For example, David might want to make a peanut butter and jelly sandwich from bread, peanut butter, and jelly.
-
-The first step might be "open the bag of bread", and David rips the bag open.
-
-The next step is "remove two slices", and then "put those slices on the plate".
-
-Then "unscrew the jam", "grab the knife", and "stick the knife in the jam".
-
-We continue with these instructions that get more and more specific, until David completes his sandwich.
-
-In fact, when we write algorithms to solve problems, we need to think about cases when something unexpected happens. For example, the input might not be within the range of what we expect, so our computer might freeze or come up with an incorrect solution.
+In fact, when we write algorithms to solve problems, 
+we need to think about cases when something unexpected happens. 
+For example, the input might not be within the range of what we expect, 
+so our computer might freeze or come up with an incorrect solution.
 
 We can see this in action with trying to find a name in the phone book, Mike Smith.
 
 One correct algorithm might be flipping through the phone book, page by page, until we find the person we are looking for.
 
-Another algorithm could be flipping through two pages at a time, but it’s no longer correct since we might skip our friend Mike. We can fix this by adding another step, where if we notice we have passed our friend (since the phone book is alphabetized), we go back a page and check.
+Another algorithm could be flipping through two pages at a time,
+but it’s no longer correct since we might skip our friend Mike.
+We can fix this by adding another step, where if we notice we have passed our friend (since the phone book is alphabetized),
+we go back a page and check.
 
-We can also open the book to the middle, and find ourselves in the M section (by last name), and know that Mike Smith is in the right half of the book, and throw the left half away. We can repeat this again and again, and eventually have one page left to look at. With 1000 pages, it would only take about 10 steps of division to reach that one page.
+We can also open the book to the middle, 
+and find ourselves in the M section (by last name), 
+and know that Mike Smith is in the right half of the book, and throw the left half away. 
+We can repeat this again and again, and eventually have one page left to look at. 
+With 1000 pages, it would only take about 10 steps of division to reach that one page.
 
 We can consider how fast each of these algorithms are, with a chart like this:
 
@@ -135,35 +137,9 @@ So our first algorithm, going page by page, requires n steps to complete, since 
 
 The second algorithm, going two pages at a time, requires n/2 steps.
 
-Our last algorithm is a different shape, with time to solve growing more and more slowly as the size of the problem increases, since we are dividing the problem in half with each step. So an increase from 1000 to 2000 pages only requires one more step to solve.
+Our last algorithm is a different shape, with time to solve growing more and more slowly as the size of the problem increases, 
+since we are dividing the problem in half with each step. So an increase from 1000 to 2000 pages only requires one more step to solve.
 
-We also need to formalize the steps we are using to solve this problem. We can write something like the following:
-
- 0   pick up phone book
- 1   open to middle of phone book
- 2   look at names
- 3   if Smith is among names
- 4       call Mike
- 5   else if Smith is earlier in book
- 6       open to middle of left half of book
- 7       go back to step 2
- 8   else if "Smith" is later in book
- 9       open to middle of right half of book
-10       go back to step 2
-11   else
-12       quit
-We start counting at 0 because that’s the default lowest value, with all the bits off.
-
-In step 3, we have the word if, which is a fork in the road, where the next step may not be taken, so we indent it to visually separate it from the lines that are always followed.
-
-The last else, in step 11, happens if we’re on the last page and Mike isn’t in the phone book, since we can no longer divide it.
-
-These steps are pseudocode, English-like syntax that is similar in precision to code.
-
-Words like pick up, open, and look are equivalent to functions in code, like verbs or actions that allow us to do something.
-
-if, else if, and else are the keywords which represent forks in the road, or decisions based on answers to certain questions. These questions are called Boolean expressions, which have an answer of either true or false. For example, Smith among names is a question, as is Smith is earlier in book and Smith is later in book.
-
-Notice too, that with one bit, we can represent true, with on, or 1, and false, with off, or 0.
+We also need to formalize the steps we are using to solve this problem.
 
 Finally, go back creates loops, or series of steps that happen over and over, until we complete our algorithm.
