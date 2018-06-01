@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0">
+  <name>HelloWorld</name>
+  <summary>Simple Hello World Package</summary>
+  <description>
+    This package contains a class that simply prints "Hello, World!".
+  </description>
+  <license>PHP License</license>
+  <maintainers>
+    <maintainer>
+      <user>ssb</user>
+      <role>lead</role>
+      <name>Stig S. Bakken</name>
+      <email>stig@php.net</email>
+    </maintainer>
+  </maintainers>
+  <release>
+    <version>1.0</version>
+    <state>stable</state>
+    <date>2004-04-24</date>
+    <notes>
+      First production release.
+    </notes>
+    <filelist>
+      <file role="php"    name="HelloWorld.php"/>
+      <file role="script" name="hello"/>
+      <file role="test"   name="HelloWorld.phpt"/>
+    </filelist>
+  </release>
+</package>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf>
+<channel about="http://www.php.net/">
+  <title>PHP: Hypertext Preprocessor</title>
+  <link>http://www.php.net/</link>
+  <description>The PHP scripting language web site</description>
+  <items>
+    <Seq>
+      <li resource="http://qa.php.net/" />
+      <li resource="http://www.php.net/news.rss" />
+    </Seq>
+  </items>
+</channel>
+
+<item about="http://qa.php.net/">
+  <title>PHP 4.3.0RC4 Released</title>
+  <link>http://qa.php.net/</link>
+  <description>
+    Despite our best efforts, it was necessary to make one more release
+    candidate, hence PHP 4.3.0RC4.
+  </description>
+</item>
+
+<item about="http://www.php.net/news.rss">
+  <title>PHP news feed available</title>
+  <link>http://www.php.net/news.rss</link>
+  <description>
+    The news of PHP.net is available now in RSS 1.0 format via our new news.rss
+    file.
+  </description>
+</item>
+
+</rdf>

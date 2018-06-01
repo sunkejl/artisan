@@ -1,5 +1,4 @@
 <?php
-
 interface I
 {
     const A = 1;

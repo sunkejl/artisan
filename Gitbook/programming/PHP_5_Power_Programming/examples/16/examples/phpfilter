@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+if (empty($argv[1])) {
+    die("Usage: phpfilter <function>\n");
+}
+
+$function = $argv[1];
+
+while ($line = fgets(STDIN)) {
+    $out = $function($line);
+    if (!preg_match('/\n\r*$/', $out)) {
+        $out .= "\n";
+    }
+	print $out;
+}
+

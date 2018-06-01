@@ -32,3 +32,6 @@ set shiftwidth=4
 "
 colorscheme desert
 autocmd VimEnter * NERDTree
+
+set lines=40 columns=155
+" 设定窗口大小

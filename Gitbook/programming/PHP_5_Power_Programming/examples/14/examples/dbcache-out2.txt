@@ -1,0 +1,8 @@
+Cache 5m MISS: SELECT * FROM vendors
+elapsed: 0.0098s
+
+Cache 1h MISS: SELECT v.name, p.name FROM vendors v, products p WHERE p.vendor = v.id
+elapsed: 0.0055s
+
+Uncached:      SELECT * FROM bids WHERE product = 42
+elapsed: 0.0015s

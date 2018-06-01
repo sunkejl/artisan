@@ -1,0 +1,15 @@
+PHP 4.3.0RC4 Released
+   Despite our best efforts, it was necessary to make one more release
+   candidate, hence PHP 4.3.0RC4. This one mainly corrects the CGI vs CLI SAPI
+   naming and fixes a couple of bugs. It is supposed to have a short testing
+   cycle, after which the final version will be put out, hopefully before the
+   end of the year.  
+      http://qa.php.net/
+
+PHP news feed available
+   The news of PHP.net is available now in RSS 1.0 format via our new news.rss
+   file. You can add this file to any news reader or portal site to get the
+   latest official PHP news. We strongly recommend you to cache the contents
+   locally on your side, as the newsfeed is updated daily. The RSS file is
+   available on every mirror site.  
+      http://www.php.net/news.rss

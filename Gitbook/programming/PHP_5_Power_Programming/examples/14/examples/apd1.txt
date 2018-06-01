@@ -1,0 +1,3 @@
+zend_extension = "/usr/lib/php/extensions/20040316/apd.so"
+apd.dumpdir = "/var/tmp/apd"
+

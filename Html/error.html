@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;"/>
+    <title>新增盘点单</title>
+    <link href="./images/admin.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/thickbox.css" rel="stylesheet">
+    <script type='text/javascript' src='js/datepicker/WdatePicker.js'></script>
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <SCRIPT language="javascript" src="js/common.js"></SCRIPT>
+    <script type='text/javascript' src='js/thickbox-compressed.js'></script>
+    <link type="text/css" href="css/thickbox.css" rel="stylesheet"/>
+    <style type='text/css'>
+        hr {
+            border: 10px solid pink;
+        }
+    </style>
+</head>
+<body>
+<table width="98%" align="center" cellspacing="1" cellpadding="3" class="i_table">
+    <tr>
+        <td class="head" colspan="6">选择库位</td>
+    </tr>
+    <tr>
+        <td class="b" width="10%">
+            <label for="area">库区:</label>
+        </td>
+        <td class="b" width="10%">
+            <select name="area" id="area">
+                <option value="0" <?= empty($_REQUEST['area']) ? "selected" : "" ?>>全部</option>
+                <? foreach ($areaArray as $k => $v): ?>
+                <option value="<?= $v['id'] ?>" <?= ($_REQUEST['area'] == $v['id']) ? "selected" : "" ?>><?= $v['name'] ?></option>
+                <? endforeach; ?>
+            </select>
+        </td>
+        <td class="b" width="10%">
+            <label for="position">库位号:</label>
+        </td>
+        <td class="b" width="10%">
+            <input type="text" name="position" id="position">
+        </td>
+        <td class="b" width="" colspan="2"></td>
+    </tr>
+    <tr>
+        <td class="b" width="10%" id="scan">
+            <button id="search-pos" name="search-pos">查询</button>
+        </td>
+        <td class="b" width="10%">
+            <button id="add-plan" name="add-plan">添加至盘点计划</button>
+        </td>
+        <td class="b" width="" colspan="4"></td>
+    </tr>
+</table>
+<br>
+<table width="98%" align="center" cellspacing="1" cellpadding="3" class="i_table" id="js-area-table">
+    <colgroup>
+        <col width="10%">
+        <col width="">
+        <col width="10%">
+    </colgroup>
+    <tr>
+        <td class="head" colspan="1">库位信息</td>
+        <td class="head" colspan="1"></td>
+        <td class="head" colspan="4"></td>
+    </tr>
+    <tr class="head_2" align="center">
+        <td>
+            <input type="checkbox" id="js-check-all"><label for="js-check-all">全选</label>
+        </td>
+        <td>库位号</td>
+        <td>库区</td>
+    </tr>
+</table>
+<hr>
+<table width="98%" align="center" cellspacing="1" cellpadding="3" class="i_table" id="js-goods-table">
+    <colgroup>
+        <col width="10%">
+        <col width="">
+        <col width="10%">
+        <col width="10%">
+        <col width="10%">
+        <col width="10%">
+        <col width="10%">
+    </colgroup>
+    <tr>
+        <td class="head" colspan="1">盘点计划</td>
+        <td class="head" colspan="1"></td>
+        <td class="head" colspan="5"></td>
+    </tr>
+    <tr class="head_2" align="center">
+        <td>库位</td>
+        <td>商品条码</td>
+        <td>商品名称</td>
+        <td>商品编号</td>
+        <td>规格</td>
+        <td>理论库存数</td>
+        <td>操作</td>
+    </tr>
+</table>
+<hr>
+<table width="98%" align="center" cellspacing="1" cellpadding="3" class="i_table">
+    <colgroup>
+        <col width="100%">
+    </colgroup>
+    <tr>
+        <td class="head" colspan="1"><label for="remark">备注</label></td>
+    </tr>
+    <tr class="head_2" align="center">
+        <td>
+    </tr>
+    <tr class='b'>
+        <td>
+            <textarea id="remark" rows="4" style="width: 100%;" placeholder="备注:这里是备注"></textarea>
+        </td>
+    </tr>
+</table>
+<hr>
+<table width="98%" align="center" cellspacing="1" cellpadding="3" class="i_table">
+    <colgroup>
+        <col width="10%">
+        <col>
+    </colgroup>
+    <tr>
+        <td class="head" colspan="2"><label for="remark">盘点方式</label></td>
+    </tr>
+    <tr class="head_2" align="center">
+        <td>
+    </tr>
+    <tr>
+        <td class="b" colspan="2">
+            <input type="radio" id="o-type-1" name="o-type" value="1"><label for="o-type-1">盲盘</label>
+            <input type="radio" id="o-type-2" name="o-type" value="2"><label for="o-type-2">实盘</label>
+        </td>
+    </tr>
+    <tr>
+        <td class="b">
+            <button id="save" name="save">确认保存</button>
+        </td>
+        <td class="b">
+            <input type="hidden" value="0" name="check_id">
+            <button id="submit" name="submit">提交审核</button>
+        </td>
+    </tr>
+</table>
+<div>
+</div>
+</body>
+<script>
+    $(function () {
+        // 全选
+        $('#js-check-all').click(function () {
+            var isCheck = $(this).attr('checked');
+            if (isCheck) {
+                $('.js-area-pos').attr("checked", "checked");
+            } else {
+                $('.js-area-pos').removeAttr("checked");
+            }
+        })
+    });
+    function submitToCheck() {
+        var checkId = $("input[name=check_id]").val();
+        checkId = parseInt(checkId);
+        if (checkId === undefined || checkId <= 0) {
+            alert("盘点单号为空，无法提交审核");
+        }
+        $.ajax({
+                type: "POST",
+                url: "admin.php",
+                data: {
+                    m: "wms_globalstocktaking",
+                    method: "submit_global_stocktaking",
+                    check_id: checkId
+                },
+                success: function (data) {
+                    if (data.code === 200) {
+                        $('button[name=submit]').remove();
+                    }
+                },
+                error: function (xhr, exception, errorThrown) {
+                    console.log(xhr.status);
+                    console.log(xhr.responseText);
+                    console.log(exception);
+                    console.log(errorThrown);
+                    var data = $.parseJSON(xhr.responseText);
+                    console.log(data.msg);
+                    alert(data.msg);
+                }
+            }
+        )
+    }
+    $("button[name=submit]").click(function () {
+        var saveButton = $("button[name=save]");
+        if (saveButton.length > 0) {
+            $.when(saveButton.trigger('click')).done(function () {
+                $("button[name=submit]").attr({disabled: true});
+                setTimeout(function () {
+                    submitToCheck();
+                }, 3000);
+            });
+        } else {
+            submitToCheck();
+        }
+    });
+    $('button[name=save]').click(function () {
+        var ridsStr = "";
+        $(".rid").each(function () {
+            ridsStr = ridsStr + $(this).val() + ",";
+        });
+        var oType = $("input[name=o-type]:checked").val();
+        var remark = $("#remark").val();
+        if (oType === undefined) {
+            alert("盘点方式未填写");
+        }
+        $(this).attr({disabled: true});
+        $.ajax({
+                type: "POST",
+                url: "admin.php",
+                data: {
+                    m: "wms_globalstocktaking",
+                    method: "add_global_stocktaking",
+                    type: 1,
+                    rids_str: ridsStr,
+                    o_type: oType,
+                    remark: remark
+                },
+                success: function (data) {
+                    if (data.code === 200) {
+                        var checkId = data.data;
+                        checkId = checkId[0].checkId;
+                        $('button[name=save]').remove();
+                        if (checkId === undefined) {
+                            alert("接口返回有误");
+                            $('button[name=submit]').remove();
+                        }
+                        $("input[name=check_id]").val(checkId);
+                    }
+                },
+                error: function (xhr, exception, errorThrown) {
+                    console.log(xhr.status);
+                    console.log(xhr.responseText);
+                    console.log(exception);
+                    console.log(errorThrown);
+                    var data = $.parseJSON(xhr.responseText);
+                    console.log(data.msg);
+                    alert(data.msg);
+                }
+            }
+        )
+    });
+    $('button[name=add-plan]').click(function () {
+        var areaAndPositionVal = "";
+        $(".js-area-pos:checked").each(function () {
+            areaAndPositionVal = areaAndPositionVal + $(this).val() + ",";
+        });
+//        console.log(areaAndPositionVal);
+        $.ajax({
+            type: "POST",
+            url: "admin.php",  //url
+            data: {
+                m: "wms_globalstocktaking",
+                method: "search_goods_by_area_and_pos",
+                area_and_position_val: areaAndPositionVal
+            },
+            success: function (data) {
+                if (data.code === 200) {
+                    var goodsInfo = data.data;
+                    $(goodsInfo).each(function () {
+                        console.log(this);
+                        var isExistLength = $("#" + this.locate + this.barcode).length;
+                        if (isExistLength > 0) {
+                            return true;
+                        }
+                        var html = "<tr class='b' align='center' id='" + this.locate + this.barcode + "'><input type=hidden class='rid' value='" + this.rid + "'><td>" + this.locate + "</td><td>" + this.barcode + "</td><td>" + this.product_name + "</td><td>" + this.pcode + "</td><td>" + "" + "</td><td>" + this.number + "</td><td><a href='javascript:;' onclick='$($(this).parent()).parent().remove()'>删除</a></td></tr>";
+                        $("#js-goods-table").append(html);
+                    })
+                } else {
+                    if (data.msg !== undefined) {
+                        alert(data.msg);
+                    }
+                }
+            },
+            error: function (xhr, exception, errorThrown) {
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+                console.log(exception);
+                console.log(errorThrown);
+                var data = $.parseJSON(xhr.responseText);
+                console.log(data.msg);
+                alert(data.msg);
+            }
+        })
+    });
+    $('button[name=search-pos]').click(function () {
+        var areaId = $("select[name=area]").val();
+        var position = $("input[name=position]").val();
+        $(".js-area-pos-add").remove();
+        $.ajax({
+            type: "POST",
+            url: "admin.php",  //url
+            data: {
+                m: "wms_globalstocktaking",
+                method: "search_area_pos",
+                area_id: areaId,
+                position: position
+            },
+            success: function (data) {
+                if (data.code === 200) {
+//                    console.log(data.info);
+                    var info = data.info;
+                    var length = info.length;
+                    for (var i = 0; i < length; i++) {
+                        var singleInfo = info[i];
+                        var html = "<tr class='b js-area-pos-add' align='center'><td><input type='checkbox' name='area-pos-id[]' class='js-area-pos' value='" + singleInfo['area_id'] + "/" + singleInfo['position_name'] + "'></td><td>" + singleInfo['position_name'] + "</td><td>" + singleInfo['area_name'] + "</td></tr>";
+                        $("#js-area-table").append(html);
+                    }
+                } else {
+                    if (data.msg !== undefined) {
+                        alert(data.msg);
+                    }
+                }
+            },
+            error: function (xhr, exception, errorThrown) {
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+                console.log(exception);
+                console.log(errorThrown);
+                var data = $.parseJSON(xhr.responseText);
+                console.log(data.msg);
+                alert(data.msg);
+            }
+        })
+    });
+</script>
+</html>

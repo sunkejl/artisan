@@ -1,3 +1,4 @@
+yum install net-tools
 netstat查询已启动的网络监听服务
 netstat -tulnp
 

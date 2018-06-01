@@ -1,0 +1,11 @@
+array(4) {
+  ["title"]=>
+  string(27) "PHP: Hypertext Preprocessor"
+  ["link"]=>
+  string(19) "http://www.php.net/"
+  ["description"]=>
+  string(35) "The PHP scripting language web site"
+  ["items"]=>
+  string(3) "
+		"
+}
