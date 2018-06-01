@@ -1,6 +1,7 @@
 ###intent
 provide an interface for creating families of related or dependent objects without specifying their concrete classes;
-a hierarchy that encapsulates:many possible platforms,and the construction of a suite of products.
+a hierarchy that encapsulates:many possible platforms
+and the construction of a suite of products.
 the new operator considered harmful
 
 ###problem
@@ -310,6 +311,15 @@ class SamsPHPBook extends AbstractPHPBook {
 ```
 
 抽象工厂模式
+抽象工厂模式提供了一种方式，可以将一组具有同一主题的单独的工厂封装起来。
+在正常使用中，客户端程序需要创建抽象工厂的具体实现，然后使用抽象工厂作为接口来创建这一主题的具体对象。
+客户端程序不需要知道（或关心）它从这些内部的工厂方法中获得对象的具体类型，
+因为客户端程序仅使用这些对象的通用接口。
+抽象工厂模式将一组对象的实现细节与他们的一般使用分离开来。
+
+通过接口,多个工厂来生产，限制创造的对象的种类
+
+把工厂进行抽象
 
 “不同工厂生产出的产品实例之间是不接触的，这个是考客户端来封装实现的”。
 一个射击学员刚入门，听到射击老师说射击的几个要素: 武器，子弹，武器装载子弹，武器打出子弹。
@@ -320,3 +330,7 @@ class SamsPHPBook extends AbstractPHPBook {
 这就是客户端加载工厂实例后，保证只使用这个工厂的生产的产品和产品之间的关系，确保不和其他工厂的产品实例进行接触。
 
 
+通过接口,使工厂抽象,限定可以创造哪几种对象
+
+工厂模式 当类的依赖发生改变时，工厂模式更容易修改
+Polymorphic 多态
