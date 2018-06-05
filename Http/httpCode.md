@@ -2,6 +2,7 @@ google 404
 https://www.google.com/unknown
 
 ```php
+    header("Content-type:application/json");
     header("HTTP/1.1 404 Not Found");
     echo json_encode(array("msg" => "fail", "code" => "404", "data" => ""));
 ```
