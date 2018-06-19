@@ -17,5 +17,18 @@
 字符串 string
 作用域 scope
 反引号 backquotes  
-多态 Polymorphism This is an object oriented concept where same function can be used for different purposes. For example function name will remain same but it make take different number of arguments and can do different task.
+多态 Polymorphism 
+This is an object oriented concept where same function can be used for different purposes. 
+For example function name will remain same but it make take different number of arguments and can do different task.
 蔚蓝 azure 
+一元 unary
+二元 binary
+三元 ternary
+加法 addition 
+减法 subtraction 
+乘法 multiplication 
+除法 division 
+取余 modulus  remainder
+冒号 colon
+分号 semicolon
+
