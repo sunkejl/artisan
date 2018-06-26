@@ -31,4 +31,20 @@ For example function name will remain same but it make take different number of 
 取余 modulus  remainder
 冒号 colon
 分号 semicolon
+并发 concurrency
+进程 Process 
+An instance of a program that is being executed in its own address space. 
+In POSIX systems, each process maintains its own heap, stack, registers, file descriptors etc
+线程 Thread
+A light weight process that shares its address space with others.
+In POSIX systems, each thread maintains the bare essentials: registers, stack, signals
+
+race condition
+原子性 atomic
+打断 interrupt
+死锁 Deadlock
+同步 synchronous 
+异步 asynchronousI
+多线程 multithread
+阻塞 blocking 
 
