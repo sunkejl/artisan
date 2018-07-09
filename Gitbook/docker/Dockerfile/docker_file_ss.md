@@ -1,3 +1,4 @@
+```
 FROM centos
 RUN yum -y update
 RUN mkdir -p /data/shadow
@@ -16,3 +17,4 @@ RUN chmod +x /data/shadow/ss.sh
 RUN echo "docker run -it -d -p 8723:8388 sk_ss"
 
 CMD bash
+```

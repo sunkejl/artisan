@@ -45,6 +45,6 @@ race condition
 死锁 Deadlock
 同步 synchronous 
 异步 asynchronousI
-多线程 multithread
+多线程 multi thread
 阻塞 blocking 
-
+内置类型 built-in type

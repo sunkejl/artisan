@@ -90,7 +90,13 @@ I/O 重定向 。不通过键盘 屏幕
 
 2&gt;&1  全部重定向到file  和第三个意思一样 。编程语言一定要用这个 （可以这个理解 2&1&gt;）
 
+&gt; 等于 \> 看输出
+
+
 nohup php foo.php &gt; nohup.out 2&gt;&1 &
+
+nohup /usr/local/sbin/php-fpm >/dev/null 2>&1 &
+
 
 tr 'a-z' 'A-Z' &lt;.test.md 把小写变大写  文件内容输入到tr命令中  等效于  cat  test.md \| tr 'a-z' 'A-Z'
 

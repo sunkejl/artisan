@@ -32,3 +32,33 @@ var_dump(quickSort($array));
 
 //合并排序  是比较($left[0] < $right[0])
 //快速排序  是把元素和基准进行比较
+
+
+function quickSortA($array)
+{
+    $len = count($array);
+    $i = 1;
+    for ($j = 1; $j < $len; $j++) {
+        foreach ($array as $k => $v) {
+            if ($array[0] < $v) {
+                $i = $k - 1;
+                break;
+            }
+        }
+        if ($array[0] > $array[$j]) {
+            $tmp = $array[$j];
+            $array[$j] = $array[$i + 1];
+            $array[$i + 1] = $tmp;
+            $i++;
+        }
+    }
+    $tmpF = $array[$i];
+    $array[$i] = $array[0];
+    $array[0] = $tmpF;
+
+    return $array;
+}
+
+$array = array(5, 4, 8, 7, 6, 9, 3, 2, 1);
+$r = quickSortA($array);
+var_dump($r);
