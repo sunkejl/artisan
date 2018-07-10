@@ -48,3 +48,7 @@ race condition
 多线程 multi thread
 阻塞 blocking 
 内置类型 built-in type
+
+功能测试 function test
+单元测试  unit test
+ 

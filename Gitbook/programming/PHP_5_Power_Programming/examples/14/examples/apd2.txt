@@ -1,0 +1,4 @@
+shell# mkdir /var/tmp/apd
+shell# chmod 1777 /var/tmp/apd
+shell# apachectl restart
+

@@ -1,0 +1,711 @@
+version: 0.9.6
+cmd: /dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+part: 1
+
+events: Time
+summary: 900
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=xml_parser_create
+0 1578
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=xml_set_element_handler
+0 50
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=xml_set_character_data_handler
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=file_get_contents
+0 220868
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 102419
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=start_handler
+0 4591
+cfn=str_repeat
+calls=1 0
+0 102419
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 50
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 131888
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 100
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 40
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 125010
+cfn=wordwrap
+calls=1 0
+0 50
+cfn=split
+calls=1 0
+0 131888
+cfn=str_repeat
+calls=1 0
+0 100
+cfn=str_repeat
+calls=1 0
+0 40
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=start_handler
+0 1308
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 50
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 128
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 2193
+cfn=wordwrap
+calls=1 0
+0 50
+cfn=split
+calls=1 0
+0 128
+cfn=str_repeat
+calls=1 0
+0 9
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=start_handler
+0 1180
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 21
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 30
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 11
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 1466
+cfn=wordwrap
+calls=1 0
+0 21
+cfn=split
+calls=1 0
+0 30
+cfn=str_repeat
+calls=1 0
+0 11
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=end_handler
+0 44009
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 38
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 150
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 21
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 11
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 2388
+cfn=wordwrap
+calls=1 0
+0 38
+cfn=split
+calls=1 0
+0 150
+cfn=str_repeat
+calls=1 0
+0 21
+cfn=str_repeat
+calls=1 0
+0 11
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=end_handler
+0 1211
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 21
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 59
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 2129
+cfn=wordwrap
+calls=1 0
+0 21
+cfn=split
+calls=1 0
+0 59
+cfn=str_repeat
+calls=1 0
+0 9
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=start_handler
+0 101010
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 59
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 140
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 21
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 2388
+cfn=wordwrap
+calls=1 0
+0 59
+cfn=split
+calls=1 0
+0 140
+cfn=str_repeat
+calls=1 0
+0 21
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=start_handler
+0 1199
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 19
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 59
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 2152
+cfn=wordwrap
+calls=1 0
+0 19
+cfn=split
+calls=1 0
+0 59
+cfn=str_repeat
+calls=1 0
+0 9
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=start_handler
+0 425691
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 47
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 69
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 28
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 1623
+cfn=wordwrap
+calls=1 0
+0 47
+cfn=split
+calls=1 0
+0 69
+cfn=str_repeat
+calls=1 0
+0 28
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=end_handler
+0 1161
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 21
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 90
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 2198
+cfn=wordwrap
+calls=1 0
+0 21
+cfn=split
+calls=1 0
+0 90
+cfn=str_repeat
+calls=1 0
+0 9
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=start_handler
+0 375878
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 28
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=end_handler
+0 1311
+cfn=str_repeat
+calls=1 0
+0 28
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 59
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 131
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 2250
+cfn=wordwrap
+calls=1 0
+0 59
+cfn=split
+calls=1 0
+0 131
+cfn=str_repeat
+calls=1 0
+0 9
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 28
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 1502
+cfn=wordwrap
+calls=1 0
+0 9
+cfn=split
+calls=1 0
+0 28
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 71
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 169
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 19
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 364840
+cfn=wordwrap
+calls=1 0
+0 71
+cfn=split
+calls=1 0
+0 169
+cfn=str_repeat
+calls=1 0
+0 19
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=end_handler
+0 1211
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 11
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 69
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 2160
+cfn=wordwrap
+calls=1 0
+0 11
+cfn=split
+calls=1 0
+0 69
+cfn=str_repeat
+calls=1 0
+0 9
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=end_handler
+0 1912
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=wordwrap
+0 21
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=split
+0 50
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 40
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=character_handler
+0 229508
+cfn=wordwrap
+calls=1 0
+0 21
+cfn=split
+calls=1 0
+0 50
+cfn=str_repeat
+calls=1 0
+0 9
+cfn=str_repeat
+calls=1 0
+0 40
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=str_repeat
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=end_handler
+0 360
+cfn=str_repeat
+calls=1 0
+0 9
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn=xml_parse
+0 290007
+cfn=start_handler
+calls=1 0
+0 107011
+cfn=character_handler
+calls=1 0
+0 257089
+cfn=start_handler
+calls=1 0
+0 1318
+cfn=character_handler
+calls=1 0
+0 2391
+cfn=start_handler
+calls=1 0
+0 1189
+cfn=character_handler
+calls=1 0
+0 1530
+cfn=end_handler
+calls=1 0
+0 44019
+cfn=character_handler
+calls=1 0
+0 2610
+cfn=end_handler
+calls=1 0
+0 1220
+cfn=character_handler
+calls=1 0
+0 2229
+cfn=start_handler
+calls=1 0
+0 101020
+cfn=character_handler
+calls=1 0
+0 2620
+cfn=start_handler
+calls=1 0
+0 1208
+cfn=character_handler
+calls=1 0
+0 2250
+cfn=start_handler
+calls=1 0
+0 425701
+cfn=character_handler
+calls=1 0
+0 1769
+cfn=end_handler
+calls=1 0
+0 1170
+cfn=character_handler
+calls=1 0
+0 2329
+cfn=start_handler
+calls=1 0
+0 375888
+cfn=end_handler
+calls=1 0
+0 1339
+cfn=character_handler
+calls=1 0
+0 2460
+cfn=character_handler
+calls=1 0
+0 1549
+cfn=character_handler
+calls=1 0
+0 365109
+cfn=end_handler
+calls=1 0
+0 1220
+cfn=character_handler
+calls=1 0
+0 2260
+cfn=end_handler
+calls=1 0
+0 1921
+cfn=character_handler
+calls=1 0
+0 229630
+cfn=end_handler
+calls=1 0
+0 369
+
+fl=/dat/docs/book/prenticehall/php5powerprogramming/chapters/draft/06-xml/examples/parse1.php
+fn={main}
+0 2274
+cfn=xml_parser_create
+calls=1 0
+0 1578
+cfn=xml_set_element_handler
+calls=1 0
+0 50
+cfn=xml_set_character_data_handler
+calls=1 0
+0 9
+cfn=file_get_contents
+calls=1 0
+0 220868
+cfn=xml_parse
+calls=1 0
+0 2230439
+

@@ -1,0 +1,17 @@
+if (isset($_GET['_profiler']) && $_GET['_profiler'] == 'apd') {
+    apd_set_pprof_trace();
+}
+ 
+if ($_SERVER['SERVER_NAME'] != 'pear.php.net') {
+    define('DEVBOX', true);
+} else {
+    define('DEVBOX', false);
+}
+ 
+require_once "pear-cache.php"; // first
+ 
+require_once "DB.php";         // second
+require_once "DB/storage.php"; // third
+require_once "pear-config.php";
+require_once "pear-auth.php";
+require_once "pear-database.php";

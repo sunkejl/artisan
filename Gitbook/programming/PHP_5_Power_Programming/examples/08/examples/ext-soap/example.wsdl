@@ -1,0 +1,46 @@
+<?xml version ='1.0' encoding ='UTF-8' ?>
+<definitions name='Example'
+	targetNamespace='http://example.org/Example'
+	xmlns:tns=' http://example.org/Example'
+	xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+	xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'
+	xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+	xmlns='http://schemas.xmlsoap.org/wsdl/'>
+
+<message name='helloRequest'>
+	<part name='name' type='xsd:string'/>
+</message>
+<message name='helloResponse'>
+	<part name='Result' type='xsd:string'/>
+</message>
+
+<portType name='ExamplePortType'>
+	<operation name='hello'>
+		<input message='tns:helloRequest'/>
+		<output message='tns:helloResponse'/>
+	</operation>
+</portType>
+
+<binding name='ExampleBinding' type='tns:ExamplePortType'>
+	<soap:binding style='rpc'
+		transport='http://schemas.xmlsoap.org/soap/http'/>
+	<operation name='hello'>
+		<soap:operation soapAction='urn:Example'/>
+		<input>
+			<soap:body use='encoded' namespace='urn:Example'
+				encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+		</input>
+		<output>
+			<soap:body use='encoded' namespace='urn:Example'
+				encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+		</output>
+	</operation>
+</binding>
+
+<service name='Example'>
+	<port name='ExamplePort' binding='ExampleBinding'>
+		<soap:address location='http://kossu/09-xml/server.php'/>
+	</port>
+</service>
+</definitions> 

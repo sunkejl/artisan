@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<package version="1.0">
+  <name>HelloWorld</name>
+  <summary>Simple Hello World Package</summary>
+  <description>This package contains a class that simply prints &quot;Hello, World!&quot;.</description>
+  <maintainers>
+    <maintainer>
+      <user>ssb</user>
+      <name>Stig S. Bakken</name>
+      <email>stig@php.net</email>
+      <role>lead</role>
+    </maintainer>
+  </maintainers>
+  <release>
+    <version>1.0</version>
+    <date>2003-02-24</date>
+    <license>PHP License</license>
+    <state>stable</state>
+    <notes>First production release.</notes>
+    <provides type="class" name="HelloWorld" />
+    <filelist>
+      <file role="php" md5sum="c2aa3b18afa22286e946aeed60b7233c" name="HelloWorld.php"/>
+    </filelist>
+  </release>
+</package>

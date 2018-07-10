@@ -1,0 +1,51 @@
+Description	date/gmdate	strftime/gmstrftime	Remarks
+AM/PM	A		
+am/pm	a	%p	This is either am or pm for the English locale, other locales might have their replacements (for example nl_NL has an empty string here)
+Century, numeric 2 digits		%C	Returns the century number, "20" for 2004 etc.
+Character, literal %		%%	Use this to place a literal character '%' inside the formatting string
+Character, newline		%n	Use this to place a newline character inside the formatting string
+Character, tab		%t	Use this to place a tab character inside the formatting string
+Day count in month	t		The number of days in the month defined by the timestamp
+Day of month, leading spaces		%e	The current day in this month defined by the timestamp. A space is prepended when the day number is below 10.
+Day of month, leading zeros	d	%D	The current day in this month defined by the timestamp. A zero is prepended when the day number is below 10.
+Day of month, without leading zeros	j		The current day in this month defined by the timestamp.
+Day of week, full textual	l (lowercase L)	%A	For strftime() the day is shown according to the names of the current locale. <?php setlocale(LC_ALL, 'C'); echo strftime('%A '); setlocale(LC_ALL, 'no_NO'); echo strftime('%A'); ?> shows: Monday mandag
+Day of week, numeric (0 = sunday)	w	%w	The range is 0 to 6 with 0 being Sunday and 6 being Saturday.
+Day of week, numeric (1= monday)		%u	The range is 1 to 7 with 1 being Monday and 7 being Sunday.
+Day of week, short textual	D	%a	For the (gm)strftime() function the name is shown according to the locale, for (gm)date() it is the normal three letter abbreviation: Sun, Sat, Wed etc.
+Day of year, numeric with leading zeros		%j	The day number in a year, starting with 001 for January 1st to 365 or 366.
+Day of year, numeric without leading zeros	z		The day number in a year, starting with 0 for January 1st to 364 or 365.
+DST active	I (capital i)		Returns 1 if DST is active and 0 if DST is not active for the givin timestamp.
+Formatted, %d/%m/%y		%D	The %D format option gives the same result as using %d/%m/%y.
+Formatted, %H:%M:%S		%T	The %T format option gives the same result as using %H:%M:%S.
+Formatted, in 24 hours notation		%R	The time in 24 hour notation without seconds. <?php echo strftime("%R\n"); // shows 23:53 ?>
+Formatted, in a.m./p.m. notation		%r	The time in 12 hour notation including seconds. <?php echo strftime("%r\n"); // shows 11:53:47 ?>
+Formatted, locale preferred date		%x	The date in 'preferred locale format'. <?php setlocale(LC_ALL, 'iw_IL'); echo strftime("%x\n"); // shows 29/02/04 ?>
+Formatted, locale preferred date and time		%c	The date and time in 'preferred locale format'. <?php setlocale(LC_ALL, 'nl_NL'); echo strftime("%c\n"); // shows zo 29 feb 2004 23:56:12 CET ?>
+Formatted, locale preferred time		%X	The date in 'preferred locale format'. <?php setlocale(LC_ALL, 'nl_NL'); echo strftime("%x\n"); // shows 29-02-04 ?>
+Hour, 12 hour format, leading zeros	h	%I	
+Hour, 12 hour format, no leading zeros	g		
+Hour, 24 hour format, leading zeros	H	%H	
+Hour, 24 hour format, no leading zeros	G		
+Internet Time	B		The swatch Internet time in which a day is divided into 1000 units: <?php echo date('L'). "\n"; // shows 005 ?>
+iso 8601	c		Shows the date in ISO 8601 format: 2004-03-01T00:08:37+01:00
+Leap year	L		Returns 1 if the year represented by the timestamp is a leap year, or 0 otherwise.
+Minutes, leading zeros	i	%M	
+Month, full textual	F	%B	For (gm)strftime() the month name is the name in the language of the current locale. <?php setlocale(LC_ALL, 'iw_IL'); echo strftime("%B\n"); // shows  ?>
+Month, numeric with leading zeros	m	%m	
+Month, numeric without leading zeros	n		
+Month, short textual	M	%b, %h	
+RFC 2822	r		Returns a RFC 2822 (mail) formatted text (Mon,  1 Mar 2004 00:13:34 +0100)
+Seconds since Unix epoch	U		
+Seconds, numeric with leading zeros	s	%S	
+Suffix for day of month, English ordinal	S		Returns an english ordinal suffix for use with the "j" formatting option. <?php echo date("jS\n"); // returns 1st ?>
+Timezone, numeric (in seconds)	Z		Returns the offset to GMT in seconds. For CET this is 3600, for EST this is -18000 for example.
+Timezone, numeric formatted	O		Returns a formatted offset to GMT. For CET this is +0100, for EST this is -0500 for example.
+Timezone, textual	T	%Z	Returns the current timezone name: CET, EST... etc
+Week number, ISO 8601	W	%V	In ISO 8601 week #1 is the first week in the year having 4 or more days. The range is 01 to 53 and you can use this in combination with %g or %G for the accompanying year.
+Week number, the first monday in a year is the start of week 1		%W	<?php echo strftime("%W", strtotime("2001-01-01")),"\n"; // shows 01 echo strftime("%W", strtotime("2001-12-31")),"\n"; // shows 53 ?>
+Week number, the first sunday in a year is the start of week 1		%U	<?php echo strftime("%U", strtotime("2001-01-01")),"\n"; // shows 00 echo strftime("%U", strtotime("2001-12-31")),"\n"; // shows 52 ?>
+Year, numeric 2 digits with leading zeros	y	%y	
+Year, numeric 2 digits; year component for %W		%g	This number might differ from the "real year" as in ISO 8601 January 1st might still belong to week 53 of the year-before. In that case the year returned with this formatting option will be the one of the previous year too.
+Year, numeric 4 digits	Y	%Y	
+Year, numeric 4 digits; year component for %W		%G	This number might differ from the "real year" as in ISO 8601 January 1st might still belong to week 53 of the year-before. In that case the year returned with this formatting option will be the one of the previous year too.

@@ -1,0 +1,189 @@
+class domdocument {
+  var $name = '#document';
+  var $url = '';
+  var $version = '1.0';
+  var $encoding = 'ISO-8859-1';
+  var $standalone = -1;
+  var $type = 9;
+  var $compression = -1;
+  var $charset = 1;
+  var $children = 
+  array (
+    0 => 
+    class domdocumenttype {
+      var $type = 10;
+      var $publicId = '-//W3C//DTD XHTML 1.0 Transitional//EN';
+      var $systemId = 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd';
+      var $name = 'html';
+    },
+    1 => 
+    class domelement {
+      var $type = 1;
+      var $tagname = 'html';
+      var $attributes = 
+      array (
+        0 => 
+        class domattribute {
+          var $type = 2;
+          var $name = 'lang';
+          var $value = 'en';
+        },
+        1 => 
+        class domattribute {
+          var $type = 2;
+          var $name = 'lang';
+          var $value = 'en';
+        },
+      );
+      var $children = 
+      array (
+        0 => 
+        class domtext {
+          var $type = 3;
+          var $name = '#text';
+          var $content = '
+  ';
+        },
+        1 => 
+        class domelement {
+          var $type = 1;
+          var $tagname = 'head';
+          var $children = 
+          array (
+            0 => 
+            class domtext {
+              var $type = 3;
+              var $name = '#text';
+              var $content = '
+    ';
+            },
+            1 => 
+            class domelement {
+              var $type = 1;
+              var $tagname = 'title';
+              var $children = 
+              array (
+                0 => 
+                class domtext {
+                  var $type = 3;
+                  var $name = '#text';
+                  var $content = 'XML Example';
+                },
+              );
+            },
+            2 => 
+            class domtext {
+              var $type = 3;
+              var $name = '#text';
+              var $content = '
+  ';
+            },
+          );
+        },
+        2 => 
+        class domtext {
+          var $type = 3;
+          var $name = '#text';
+          var $content = '
+  ';
+        },
+        3 => 
+        class domelement {
+          var $type = 1;
+          var $tagname = 'body';
+          var $attributes = 
+          array (
+            0 => 
+            class domattribute {
+              var $type = 2;
+              var $name = 'background';
+              var $value = 'bg.png';
+            },
+          );
+          var $children = 
+          array (
+            0 => 
+            class domtext {
+              var $type = 3;
+              var $name = '#text';
+              var $content = '
+    ';
+            },
+            1 => 
+            class domelement {
+              var $type = 1;
+              var $tagname = 'p';
+              var $children = 
+              array (
+                0 => 
+                class domtext {
+                  var $type = 3;
+                  var $name = '#text';
+                  var $content = '
+      Moved to ';
+                },
+                1 => 
+                class domelement {
+                  var $type = 1;
+                  var $tagname = 'a';
+                  var $attributes = 
+                  array (
+                    0 => 
+                    class domattribute {
+                      var $type = 2;
+                      var $name = 'href';
+                      var $value = 'http://example.org/';
+                    },
+                  );
+                  var $children = 
+                  array (
+                    0 => 
+                    class domtext {
+                      var $type = 3;
+                      var $name = '#text';
+                      var $content = 'example.org';
+                    },
+                  );
+                },
+                2 => 
+                class domtext {
+                  var $type = 3;
+                  var $name = '#text';
+                  var $content = '.
+      ';
+                },
+                3 => 
+                class domelement {
+                  var $type = 1;
+                  var $tagname = 'br';
+                },
+                4 => 
+                class domtext {
+                  var $type = 3;
+                  var $name = '#text';
+                  var $content = '
+      foo & bar
+    ';
+                },
+              );
+            },
+            2 => 
+            class domtext {
+              var $type = 3;
+              var $name = '#text';
+              var $content = '
+  ';
+            },
+          );
+        },
+        4 => 
+        class domtext {
+          var $type = 3;
+          var $name = '#text';
+          var $content = '
+';
+        },
+      );
+    },
+  );
+}
