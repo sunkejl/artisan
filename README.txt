@@ -1,5 +1,5 @@
 ../artisan/
-├── Alarak
+├── Alara k
 ├── Algorithm
 │   ├── insertSoct.php
 │   └── mergeSort.php
