@@ -1,31 +1,35 @@
 <?php
+
+/**
+ * Interface I
+ */
 interface I
 {
-    const A = 1;
+	const A = 1;
 
-    function d();
+	function d();
 }
 
 abstract class A implements I
 {
-    abstract function getA();
+	abstract function getA();
 
-    function c()
-    {
-        echo 123;
-    }
+	function c()
+	{
+		echo 123;
+	}
 }
 
 class B extends A implements I
 {
-    function d()
-    {
-    }
+	function d()
+	{
+	}
 
-    function getA()
-    {
-        parent::c();
-    }
+	function getA()
+	{
+		parent::c();
+	}
 }
 
 $b = new B();
