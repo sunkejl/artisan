@@ -1,0 +1,15 @@
+git fetch origin master
+git rebase origin/master
+git push -f origin_branch local_branch
+
+无需rebase的显示
+$ git rebase origin/master
+Current branch pmt-46053 is up to date.
+
+
+google git 把多次提交合并成一个
+git rebase -i #hash数字#
+
+
+私有git reset --hard #hash ,push -f
+公共git revert #hash
