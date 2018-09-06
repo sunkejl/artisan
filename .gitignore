@@ -1,5 +1,6 @@
 vendor
 Eknus/app/Config
 tmp
+.idea
 Gitbook/blog/geek_ignore
-.*
+
