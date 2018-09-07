@@ -17,3 +17,11 @@ git commit -m
 
 git push origin master
 
+
+vim /.git/config
+
+[user]
+	email = sunkejl@live.com
+	name = sk
+
+
