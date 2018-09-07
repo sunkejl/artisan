@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cc6fecc-d8f0-4b72-9ce4-f1d4bc3eb2dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gitbook/git/rebase.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gitbook/git/rebase.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +17,7 @@
     <session id="-1193249147">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.6" value="1" />
@@ -27,30 +27,30 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="22" />
+          <entry key="md" value="23" />
           <entry key="php" value="1" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="22" />
+          <entry key="Markdown" value="23" />
           <entry key="PHP" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="64" />
+          <entry key="md" value="126" />
           <entry key="php" value="19" />
-          <entry key="txt" value="419" />
+          <entry key="txt" value="566" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="64" />
+          <entry key="Markdown" value="126" />
           <entry key="PHP" value="19" />
-          <entry key="PLAIN_TEXT" value="419" />
+          <entry key="PLAIN_TEXT" value="566" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class" />
@@ -108,16 +108,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gitbook/git/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gitbook/git/recover.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -130,8 +120,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gitbook/git/rebase.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="380">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gitbook/git/got_git/chapter2.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="40">
+                <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -183,8 +185,9 @@
         <option value="$PROJECT_DIR$/Gitbook/git/SUMMARY.md" />
         <option value="$PROJECT_DIR$/Alarak/abstratM.php" />
         <option value="$PROJECT_DIR$/Gitbook/git/git_commit.md" />
-        <option value="$PROJECT_DIR$/Gitbook/git/rebase.txt" />
         <option value="$PROJECT_DIR$/Gitbook/git/remote.txt" />
+        <option value="$PROJECT_DIR$/Gitbook/git/got_git/chapter2.md" />
+        <option value="$PROJECT_DIR$/Gitbook/git/rebase.txt" />
       </list>
     </option>
   </component>
@@ -198,8 +201,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="418" />
-    <option name="y" value="399" />
+    <option name="x" value="38" />
+    <option name="y" value="377" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -253,6 +256,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\github\artisan\Gitbook\git" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -281,15 +289,15 @@
       <workItem from="1534840229291" duration="623000" />
       <workItem from="1535366154376" duration="879000" />
       <workItem from="1536146509437" duration="646000" />
-      <workItem from="1536199387796" duration="1079000" />
+      <workItem from="1536199387796" duration="3976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5294000" />
+    <option name="totallyTimeSpent" value="8191000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="418" y="399" width="1936" height="1056" extended-state="0" />
+    <frame x="38" y="377" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
@@ -490,10 +498,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gitbook/git/got_git/chapter2.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="40">
+            <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gitbook/git/rebase.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="380">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
