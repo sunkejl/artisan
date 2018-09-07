@@ -5,3 +5,12 @@ git config -e
 git config -e --global
 git config -e --system
 
+<<<<<<< HEAD
+=======
+git diff
+
+git diff --staged
+
+git diff HEAD
+
+>>>>>>> add git
