@@ -5,12 +5,22 @@ git config -e
 git config -e --global
 git config -e --system
 
-<<<<<<< HEAD
-=======
+工作区和index
 git diff
 
+index 和HEAD
 git diff --staged
 
+工作区和HEAD
 git diff HEAD
 
->>>>>>> add git
+
+git log --pretty=raw
+
+git log --graph
+
+git stash
+git stash pop
+git stash show
+
+
