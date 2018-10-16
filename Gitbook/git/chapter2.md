@@ -1,17 +1,13 @@
 git init
 
   
-git remote 
-
-  
-add origin 
-
-  
-git@github.com:sunkejl/xxxx.git   
+git remote  add origin git@github.com:sunkejl/xxxx.git
 
 git pull origin master   
 
-ssh-keygen   git add .   
+ssh-keygen   
+
+git add .   
 
 git commit -m   
 
