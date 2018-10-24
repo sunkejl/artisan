@@ -51,4 +51,6 @@ race condition
 
 功能测试 function test
 单元测试  unit test
- 
+
+symbolic constant
+EOF end of file
