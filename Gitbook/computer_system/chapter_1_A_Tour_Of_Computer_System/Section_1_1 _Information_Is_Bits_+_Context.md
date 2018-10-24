@@ -86,4 +86,4 @@ C pointers are a common source of confusion and programming errors.
 
 C also lacks explicit support for useful abstractions such as classes, objects, and exceptions. 
 
-Newer languages such as C++ and Javaaddress these issues for application-level programs
+Newer languages such as C++ and Java address these issues for application-level programs
