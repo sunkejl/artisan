@@ -41,9 +41,9 @@ Aside
 Origins of the C programming languageC was developed from 1969 to 1973 by Dennis Ritchie of Bell Laboratories. 
 
 The American NationalStandards Institute (ANSI) ratified the ANSI C standard in 1989,
-and this standardization later becamethe  responsibility  of  the  International  Standards  Organization  (ISO).  
+and this standardization later became the  responsibility  of  the  International  Standards  Organization  (ISO).  
 
-The  standards  define  the  Clanguage and a set of library functions known as theC standard library. 
+The  standards  define  the  C language and a set of library functions known as the C standard library. 
 
 Kernighan and Ritchie describe ANSI C in their classic book, which is known affectionately as “K&R” [58]. 
 
@@ -61,7 +61,7 @@ As Unix became popular in universities in the late 1970s and early1980s,
 many people were exposed to C and found that they liked it. 
 
 Since Unix was written almost entirely in C, it could be easily ported to new machines,
-which created an even wider audience forboth C and Unix.
+which created an even wider audience for both C and Unix.
 
 C is a small, simple language.
 
