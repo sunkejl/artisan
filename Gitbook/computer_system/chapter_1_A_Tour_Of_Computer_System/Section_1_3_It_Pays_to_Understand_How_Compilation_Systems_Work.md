@@ -68,7 +68,7 @@ For many years,
 
 buffer overflow vulnerabilities have accounted for the majority of security holes in network and Internet servers.
 
-These vulnerabilities exist because too few programmers understand the needto carefully restrict the quantity and forms of data they accept from untrustedsources. 
+These vulnerabilities exist because too few programmers understand the need to carefully restrict the quantity and forms of data they accept from untrustedsources. 
 
 A first step in learning secure programming is to understand the con-sequences of the way data and control information are stored on the program stack.  
 
