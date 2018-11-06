@@ -1,8 +1,6 @@
 Section 1.3 It Pays to Understand How Compilation Systems Work
 
-
 For simple programs such as hello.c, we can rely on the compilation system to produce correct and efficient machine code. 
-
 
 However, there are some important reasons why programmers need to understand how compilation systems work:
 
@@ -70,9 +68,7 @@ For many years,
 
 buffer overflow vulnerabilities have accounted for the majority of security holes in network and Internet servers.
 
-
-These vulnerabilities exist because too few programmers understand the needto carefully restrict the quantity and forms of data they accept from untrustedsources. 
-
+These vulnerabilities exist because too few programmers understand the need to carefully restrict the quantity and forms of data they accept from untrustedsources. 
 
 A first step in learning secure programming is to understand the con-sequences of the way data and control information are stored on the program stack.  
 
