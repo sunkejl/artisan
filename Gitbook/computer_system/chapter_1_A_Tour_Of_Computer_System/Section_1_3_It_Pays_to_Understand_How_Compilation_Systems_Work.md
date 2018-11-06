@@ -1,5 +1,6 @@
 Section 1.3 It Pays to Understand How Compilation Systems Work
 
+
 For simple programs such as hello.c, we can rely on the compilation system to produce correct and efficient machine code. 
 
 However, there are some important reasons why programmers need to understand how compilation systems work:
