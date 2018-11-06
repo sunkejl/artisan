@@ -70,7 +70,6 @@ For many years,
 
 buffer overflow vulnerabilities have accounted for the majority of security holes in network and Internet servers.
 
-
 These vulnerabilities exist because too few programmers understand the needto carefully restrict the quantity and forms of data they accept from untrustedsources. 
 
 
