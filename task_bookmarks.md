@@ -46,3 +46,7 @@ https://github.com/airbnb/javascript
 
 101个设计模式
 https://sourcemaking.com/design-patterns-and-tips
+
+git
+https://www.atlassian.com/git
+https://github.com/geeeeeeeeek/git-recipes
