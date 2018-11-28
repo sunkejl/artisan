@@ -118,3 +118,65 @@ that can exploit the thread-level parallelism available with the hardware.
 Chapter 12 will look much more deeply into concurrency and its use to provide a sharing of processing resources and to enable more parallelism
 in program execution.
 
+Instruction-Level Parallelism
+
+At a much lower level of abstraction, 
+
+modern processors can execute multiple instructions at one time, 
+
+a property known as instruction-level parallelism. 
+
+For example, early microprocessors, 
+
+such as the 1978-vintage Intel 8086 required multiple (typically, 3–10) clock cycles to execute a single instruction. 
+
+More recent processors can sustain execution rates of 2–4 instructions per clock cycle. 
+
+Any given instruction requires much longer from start to finish, 
+
+perhaps 20 cycles or more, but the processor uses a number of clever tricks to process as many as 100
+instructions at a time. 
+
+In Chapter 4, we will explore the use of pipelining, where the actions required to execute an instruction are partitioned 
+into different steps and the processor hardware is organized as a series of stages, 
+
+each performing one of these steps. 
+
+The stages can operate in parallel, working on different parts of different instructions. 
+
+We will see that a fairly simple hardware design can sustain an execution rate close to one instruction per clock cycle.
+
+Processors that can sustain execution rates faster than one instruction per cycle are known as superscalar processors. 
+
+Most modern processors support superscalar operation. 
+
+In Chapter 5, we will describe a high-level model of such processors. 
+
+We will see that application programmers can use this model to understand the performance of their programs. 
+
+They can then write programs such that the generated code achieves higher degrees of instruction-level parallelism and therefore runs faster.
+
+
+Single-Instruction, Multiple-Data (SIMD) Parallelism
+
+At the lowest level, many modern processors have special hardware that 
+
+allows a single instruction to cause multiple operations to be performed in parallel,
+
+a mode known as single-instruction, multiple-data, or “SIMD” parallelism. 
+
+For example, recent generations of Intel and AMD processors have instructions that
+can add four pairs of single-precision floating-point numbers (C data type float)
+in parallel.
+
+These SIMD instructions are provided mostly to speed up applications that process image, sound, and video data. 
+
+Although some compilers attempt to automatically extract SIMD parallelism from C programs, 
+
+a more reliable method is to write programs using special vector data types supported in compilers such as gcc.
+
+We describe this style of programming in Web Aside opt:simd, 
+
+as a supplement to the more general presentation on program optimization found in Chapter 5.
+
+
