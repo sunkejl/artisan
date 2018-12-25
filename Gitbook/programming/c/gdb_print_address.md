@@ -1,5 +1,12 @@
 gcc a.c -g
+
 gdb a.out
+
+```gdb
+break 1
+run
+
+```
  
 gdb 打印浮点型
 (gdb) help x
@@ -25,4 +32,7 @@ with this command or "print".
  
 (gdb) print /f 1
 $12 = 1.40129846e-45
+
+
+[bookermarks](https://blog.csdn.net/haoel/article/details/2879)
  
