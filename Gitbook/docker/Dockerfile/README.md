@@ -19,3 +19,6 @@ s.sh
   4 /bin/bash
 
 
+
+https://stackoverflow.com/questions/28212380/why-docker-container-exits-immediately
+
