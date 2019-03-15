@@ -38,8 +38,8 @@ int main(){
     Solution S;
     vector<int> r;
     r=S.twoSum(v,j);
-cout << r.size() << endl;
-for(int k=0;k<r.size();k++){
-cout << r[k] << endl;
+    cout << r.size() << endl;
+    for(int k=0;k<r.size();k++){
+        cout << r[k] << endl;
 }
 }
